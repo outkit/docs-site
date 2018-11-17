@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html ng-app="hub" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="pageTitle">Outkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Outkit">
+    <meta property="og:description">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Application styles-->
+    <link rel="stylesheet" href="../../assets/bundle-hub2.css">
+    <!-- Custom CSS-->
+    <style>a{color:#343c54}a:hover{color:#0d0f15}a.text-muted:hover{color:#343c54}.btn.btn-primary{background-color:#343c54}.btn.btn-primary:hover{background-color:#0d0f15}.theme-line #hub-landing-top h2{color:#343c54}#hub-landing-top .btn:hover{color:#343c54}.theme-line #hub-landing-top .btn:hover{color:#fff}.theme-solid header#hub-header #header-top{background-color:#343c54}.theme-solid.header-gradient header#hub-header #header-top{background:linear-gradient(to bottom,#343c54,#171a25)}.theme-solid.header-custom header#hub-header #header-top{background-image:url(undefined)}.theme-line header#hub-header #header-top{border-bottom-color:#343c54}.theme-line header#hub-header #header-top .btn{background-color:#343c54}header#hub-header #header-top #header-logo{width:119px;height:40px;margin-top:0;background-image:url(https://files.readme.io/e6b38a5-small-Screenshot_2018-01-23_10.46.23.png)}nav#hub-sidebar ul a.active{background-color:#343c54}#hub-subheader-parent #hub-subheader .hub-subheader-breadcrumbs .dropdown-menu a:hover{background-color:#343c54}.discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button{background-color:#343c54}section#hub-discuss .discussion a .discuss-body h4{color:#343c54}section#hub-discuss .discussion a:hover .discuss-body h4{color:#0d0f15}#hub-subheader-parent #hub-subheader.sticky-header.sticky{border-bottom-color:#343c54}#hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box{border-bottom-color:#343c54}#hub-search-results h3 em{color:#343c54}.main_background,.tag-item{background:#343c54!important}.main_background:hover{background:#0d0f15!important}.main_color{color:#343c54!important}.main_color_hover:hover{color:#343c54!important}section#hub-discuss h1{color:#343c54}#hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=number]:focus,#hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=text]:focus,#hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input textarea:focus{border:1px solid #343c54}#hub-reference .hub-api .api-definition .api-try-it-out.active{border-color:#343c54;background-color:#343c54}#hub-reference .hub-api .api-definition .api-try-it-out.active:hover{background-color:#0d0f15;border-color:#0d0f15}#hub-reference .hub-api .api-definition .api-try-it-out:hover{border-color:#343c54;color:#343c54}#hub-reference .hub-reference .hub-reference-section .hub-reference-left header .hub-reference-edit:hover{color:#343c54}.main-color-accent{border-bottom:3px solid #343c54;padding-bottom:8px}#hub-reference .hub-reference .hub-reference-section p,#hub-reference .hub-reference .hub-reference-section table,#hub-reference .hub-reference .hub-reference-section ul,.content-body .magic-block-api-header ol li,.content-body .magic-block-api-header ul li,.content-body .magic-block-textarea ol li,.content-body .magic-block-textarea ul li,ol,p,ul{font-size:18px;line-height:1.5em}#hub-reference .hub-reference .hub-reference-section .hub-reference-right{width:600px}.hub-reference-right .marked-table{margin-left:0}</style>
+  </head>
+  <body class="is-ref body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal hub-full is-lang-curl">
+    <header id="hub-header">
+      <div id="header-top">
+        <div class="hub-container">
+          <div class="clearfix">
+            <a href="../docs/index.html" class="header-link">
+              <h1 id="header-logo">Outkit</h1>
+            </a>
+            <nav>
+              <ul id="header-nav-left">
+                <li><a href="../docs/index.html" title="Guides">Guides</a></li>
+                <li><a href="../reference/index.html" title="API Reference">API Reference</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="hub-landing-top" class="hub-landing-buttons">
+            <h2>The Outkit Support and Developer Hub</h2>
+            <div class="hub-landing-description">
+              <p>Welcome to the Outkit support and developer hub. Here you&#39;ll find comprehensive guides and documentation to help you start working with Outkit as quickly as possible, as well as support if you get stuck. Let&#39;s jump right in!</p>
+            </div>
+            <a href="../docs/index.html" class="btn btn-lg btn-primary"><i class="fa fa-rocket"></i>Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../docs/index.html" class="btn btn-lg btn-primary"><i class="icon icon-documentation"></i><span>Guides</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="hub-subheader-parent">
+        <div id="hub-subheader">
+          <div class="hub-container">
+            <nav id="header-bottom-nav">
+              <div id="header-icon-nav">
+                <div class="icons">
+                  <div class="hub-subheader-breadcrumbs">
+                    <!-- Version picker--><span class="hub-breadcrumb-item"><span>v1.0</span></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div ng-class="{active:contentLoadingSection || contentLoading}" class="hub-loading-indicator"></div>
+    <div id="hub-container" ng-class="{loading:contentLoadingSection}">
+      <div class="hub-container">
+        <div id="hub-sidebar-parent" sidebar class="hub-sidebar-sticky">
+          <nav id="hub-sidebar">
+            <div class="scrollable-parent">
+              <scrollable scroll-to-top="state.current().root">
+                <div id="hub-sidebar-content">
+                  <div>
+                    <div class="hub-sidebar-category active">
+                      <h3>Introduction</h3>
+                      <ul>
+                        <li ng-class="{'subnav-expanded' : isActive('5a67063fd11cd6001e7b543c')}" class="hub-sidebar-page">
+                          <a du-smooth-scroll duration="0" du-scrollspy="welcome" href="#welcome" target="_self" class="text-overflow">Introduction</a>
+                          <ul class="subpages"></ul>
+                        </li>
+                        <li ng-class="{'subnav-expanded' : isActive('5ada5a10401b470003f752d3')}" class="hub-sidebar-page">
+                          <a du-smooth-scroll duration="0" du-scrollspy="authentication" href="#authentication" target="_self" class="text-overflow">Authentication</a>
+                          <ul class="subpages"></ul>
+                        </li>
+                        <li ng-class="{'subnav-expanded' : isActive('5ada5a223b837c00038488b6')}" class="hub-sidebar-page">
+                          <a du-smooth-scroll duration="0" du-scrollspy="return-values" href="#return-values" target="_self" class="text-overflow">Return values</a>
+                          <ul class="subpages"></ul>
+                        </li>
+                        <li ng-class="{'subnav-expanded' : isActive('5ada5a2a4ef2fe0003a547be')}" class="hub-sidebar-page">
+                          <a du-smooth-scroll duration="0" du-scrollspy="errors" href="#errors" target="_self" class="text-overflow">Errors</a>
+                          <ul class="subpages"></ul>
+                        </li>
+                        <li ng-class="{'subnav-expanded' : isActive('5ada5a406636fe0003ede1a9')}" class="hub-sidebar-page">
+                          <a du-smooth-scroll duration="0" du-scrollspy="client-libraries" href="#client-libraries" target="_self" class="text-overflow">Client libraries</a>
+                          <ul class="subpages"></ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="hub-sidebar-category">
+                      <h3>Outkit REST API</h3>
+                      <ul>
+                        <li class="hub-sidebar-page subnav-expanded">
+                          <a du-smooth-scroll duration="0" du-scrollspy="message" href="#message" target="_self" class="text-overflow"><span class="fa fa-chevron-right"></span>Message</a>
+                          <ul class="subpages">
+                            <li><a du-smooth-scroll duration="0" du-scrollspy="outkitmessagesshow-1" href="#outkitmessagesshow-1" class="text-overflow subpage"><span title="get" class="pg-type type-get">get</span>/messages/{id}</a></li>
+                            <li><a du-smooth-scroll duration="0" du-scrollspy="outkitmessagescreate-1" href="#outkitmessagescreate-1" class="text-overflow subpage"><span title="post" class="pg-type type-post">post</span>/messages</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </scrollable>
+            </div>
+          </nav>
+        </div>
+        <section id="hub-content">
+          <div state-container ng-class="{loading: contentLoading}" class="hub-content-container">
+            <div id="replace-view" ng-non-bindable>
+              <div id="hub-reference" class="content-body hub-reference-sticky hub-reference-theme-row">
+                <div id="page-welcome" class="hub-reference">
+                  <a id="welcome" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>Introduction</h2>
+                        <div class="excerpt"></div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                        <div class="magic-block-textarea">
+                          <p>The Outkit API is based on REST principles. It has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. We use HTTP verbs with predictable semantics. JSON is returned by all API responses, including errors, although some API libraries may convert responses to appropriate language-specific objects.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                        <div class="magic-block-callout type-info ">
+                          <h3><i title="Info" class="fa fa-info-circle"></i>API endpoint
+                          </h3>
+                          <div class="callout-body">
+                            <pre><code>https://api.outkit.io/v1
+</code></pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-authentication" class="hub-reference">
+                  <a id="authentication" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>Authentication</h2>
+                        <div class="excerpt"></div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                        <div class="magic-block-textarea">
+                          <p>Authentication is done by including the <code>key</code> and  <code>passphrase</code> from your API key in the headers <code>Outkit-Access-Key</code> and <code>Outkit-Access-Passphrase</code>. You can manage your API keys in the web UI. Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such GitHub, client-side code, and so forth.</p>
+                          <p>All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.</p>
+                          <p>All API requests must be signed unless you have explicitly opted out by setting the appropriate flag on your API key. Request signing ensures that API requests have not been tampered with in transit, and that the API key secret never has to be transmitted over the wire.</p>
+                          <p>However, since request signing makes testing and debugging with <code>curl</code> and similar tools highly impractical, you may (as mentioned above) disable it. In these cases, you’ll also need to send an <code>Outkit-Access-Secret</code> header, containing your API key secret. Don’t send your secret when using signed requests.</p>
+                          <p>Signing a request involves adding a few more headers:</p>
+                          <ul>
+                            <li ><code>Outkit-Access-Timestamp</code> - a Unix timestamp (seconds since Epoch) like <code>1496837645</code></li>
+                            <li ><code>Outkit-Access-Signature</code> - the actual signature</li>
+                          </ul>
+                          <p>The signature is computed by first concatenating the following strings:</p>
+                          <ul>
+                            <li >The exact same timestamp that was used in the timestamp header</li>
+                            <li >HTTP verb (uppercased)</li>
+                            <li >Request path, including any querystring parameters</li>
+                            <li >The request body (which is a stringified version of the JSON payload), where applicable</li>
+                          </ul>
+                          <p>The following is an example of how this might look with some actual data (where <code>+</code> represents strings concatenation):</p>
+                          <pre><code> &#39;1496837645&#39; + &#39;POST&#39; + &#39;/v1/messages&#39; + &#39;{&quot;message&quot;:{&quot;type&quot;:&quot;email&quot;,...&#125;&#125;</span>&#39;
+</code></pre>
+                          <p>Once you have this pre-signature string, you need to do the following to generate the actual signature:</p>
+                          <ul>
+                            <li >Create an sha256 HMAC of the pre-signature string using the API key secret as the key. </li>
+                            <li >Base64-encode the result of the previous operation</li>
+                          </ul>
+                          <p>You now have the string that goes in the <code>Outkit-Access-Signature</code> header.</p>
+                          <p>Here is an example of how to do this in a few languages:</p>
+                        </div>
+                        <div class="magic-block-code">
+                          <ul class="block-code-header">
+                            <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">JavaScript</a></li>
+                            <li><a href="" ng-click="showCode(1)" ng-class="{active: (1 == tab)}">PHP</a></li>
+                            <li><a href="" ng-click="showCode(2)" ng-class="{active: (2 == tab)}">Elixir</a></li>
+                          </ul>
+                          <div class="block-code-code">
+                            <span ng-if="tab == 0">
+                              <button ng-click="copyCode(92)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                              <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-92">const timestamp = Date.now() / 1000;
+const payload = timestamp +  method.toUpperCase() + path + body;
+const hmac = crypto.createHmac('sha256', apiKeySecret);
+const signature = hmac.update(preSig).digest('base64');
+</textarea>
+                              <pre id="code-92"><code><span class='cm-s-neo'><span class="cm-keyword">const</span> <span class="cm-variable">timestamp</span> <span class="cm-operator">=</span> <span class="cm-variable">Date</span>.<span class="cm-property">now</span>() <span class="cm-operator">&#47;</span> <span class="cm-number">1000</span>;
+<span class="cm-keyword">const</span> <span class="cm-variable">payload</span> <span class="cm-operator">=</span> <span class="cm-variable">timestamp</span> <span class="cm-operator">+</span>  <span class="cm-variable">method</span>.<span class="cm-property">toUpperCase</span>() <span class="cm-operator">+</span> <span class="cm-variable">path</span> <span class="cm-operator">+</span> <span class="cm-variable">body</span>;
+<span class="cm-keyword">const</span> <span class="cm-variable">hmac</span> <span class="cm-operator">=</span> <span class="cm-variable">crypto</span>.<span class="cm-property">createHmac</span>(<span class="cm-string">'sha256'</span>, <span class="cm-variable">apiKeySecret</span>);
+<span class="cm-keyword">const</span> <span class="cm-variable">signature</span> <span class="cm-operator">=</span> <span class="cm-variable">hmac</span>.<span class="cm-property">update</span>(<span class="cm-variable">preSig</span>).<span class="cm-property">digest</span>(<span class="cm-string">'base64'</span>);
+</span></code></pre>
+                            </span>
+                            <span ng-if="tab == 1">
+                              <button ng-click="copyCode(32)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                              <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-32">$timestamp = time();
+$payload = $timestamp . $method . $path . $body;
+$hmac = hash_hmac('sha256', $payload, $apiKeySecret, true);
+$signature = base64_encode($hmac);
+</textarea>
+                              <pre id="code-32"><code><span class='cm-s-neo'><span class="cm-variable-2">$timestamp</span> <span class="cm-operator">=</span> <span class="cm-builtin">time</span>();
+<span class="cm-variable-2">$payload</span> <span class="cm-operator">=</span> <span class="cm-variable-2">$timestamp</span> . <span class="cm-variable-2">$method</span> . <span class="cm-variable-2">$path</span> . <span class="cm-variable-2">$body</span>;
+<span class="cm-variable-2">$hmac</span> <span class="cm-operator">=</span> <span class="cm-variable">hash_hmac</span>(<span class="cm-string">'sha256'</span>, <span class="cm-variable-2">$payload</span>, <span class="cm-variable-2">$apiKeySecret</span>, <span class="cm-atom">true</span>);
+<span class="cm-variable-2">$signature</span> <span class="cm-operator">=</span> <span class="cm-builtin">base64_encode</span>(<span class="cm-variable-2">$hmac</span>);
+</span></code></pre>
+                            </span>
+                            <span ng-if="tab == 2">
+                              <button ng-click="copyCode(739)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                              <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-739">timestamp = DateTime.utc_now |&gt; DateTime.to_unix |&gt; Integer.to_string
+payload = timestamp &lt;&gt; method &lt;&gt; path &lt;&gt; body
+hmac = :crypto.hmac(:sha256, api_key_secret, payload)
+signature = Base.encode64(hmac)
+</textarea>
+                              <pre id="code-739"><code>timestamp = DateTime.utc_now |&gt; DateTime.to_unix |&gt; Integer.to_string
+payload = timestamp &lt;&gt; method &lt;&gt; path &lt;&gt; body
+hmac = :crypto.hmac(:sha256, api_key_secret, payload)
+signature = Base.encode64(hmac)
+</code></pre>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-return-values" class="hub-reference">
+                  <a id="return-values" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>Return values</h2>
+                        <div class="excerpt"></div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                        <div class="magic-block-textarea">
+                          <p>The Outkit API always returns <code>application/json</code>, with the payload wrapped in a <code>data</code> key.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                        <div class="magic-block-callout type-info ">
+                          <h3><i title="Info" class="fa fa-info-circle"></i>Example response
+                          </h3>
+                          <div class="callout-body">
+                            <pre><code>{
+  &quot;data&quot;: {
+    &quot;backend&quot;: &quot;mailgun&quot;,
+    &quot;backend_id&quot;: &quot;e40ec64d-ac2a-4294-a54f-c8a249ec319b&quot;,
+    &quot;backend_response&quot;: {},
+    &quot;data&quot;: {},
+    &quot;delivered_at&quot;: null,
+    &quot;done&quot;: true,
+    &quot;failed_at&quot;: null,
+    &quot;from&quot;: &quot;support@outkit.io&quot;,
+    &quot;html_body&quot;: &quot;...&quot;,
+    &quot;html_template_body&quot;: null,
+    &quot;id&quot;: &quot;6dc5b9a6-863a-4be2-bd58-8540f2d9120a&quot;,
+    &quot;id_from_backend&quot;: null,
+    &quot;id_from_submitter&quot;: null,
+    &quot;project&quot;: &quot;outkit&quot;,
+    &quot;project_id&quot;: &quot;9c78ecef-d9cf-49af-8bfe-5b684ff6e0e3&quot;,
+    &quot;provider_id&quot;: &quot;a5883e68-4f6f-48c8-b6e7-98da780e3dfb&quot;,
+    &quot;queued_for_delivery_at&quot;: null,
+    &quot;queued_for_rendering_at&quot;: null,
+    &quot;received_at&quot;: &quot;2018-04-21T09:02:24.607840Z&quot;,
+    &quot;render_only&quot;: false,
+    &quot;rendered_at&quot;: &quot;2018-04-21T09:02:24.646770Z&quot;,
+    &quot;status&quot;: &quot;rendered&quot;,
+    &quot;status_message&quot;: null,
+    &quot;subject&quot;: &quot;Welcome to Outkit&quot;,
+    &quot;sync&quot;: false,
+    &quot;template&quot;: &quot;welcome&quot;,
+    &quot;template_id&quot;: &quot;9d59ed16-d435-4631-8cd5-111aaa355468&quot;,
+    &quot;template_styles&quot;: null,
+    &quot;test&quot;: false,
+    &quot;text_body&quot;: &quot;...&quot;,
+    &quot;text_template_body&quot;: null,
+    &quot;to&quot;: &quot;some.email@example.com&quot;,
+    &quot;type&quot;: &quot;email&quot;
+  }
+</code></pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-errors" class="hub-reference">
+                  <a id="errors" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>Errors</h2>
+                        <div class="excerpt"></div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                        <div class="magic-block-textarea">
+                          <p>Outkit uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g., a required parameter was omitted, a value was invalid/illegal, etc.). Codes in the 5xx range indicate an error on Outkit&#39;s end (should be rare).</p>
+                          <p>Many errors include a JSON payload that offers more information.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                        <div class="magic-block-callout type-info ">
+                          <h3><i title="Info" class="fa fa-info-circle"></i>HTTP status code summary
+                          </h3>
+                          <div class="callout-body">
+                            <div class="marked-table">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Status code</th>
+                                    <th>Description</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>20x - OK</td>
+                                    <td>Everything worked as expected.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>401 - Unauthorized</td>
+                                    <td>No valid API key provided.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>404 - Not Found</td>
+                                    <td>The requested resource doesn&#39;t exist.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>422 - Unprocessable Entity</td>
+                                    <td>The request was unacceptable, often due to missing a required parameter.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>429 - Too Many Requests</td>
+                                    <td>Too many requests hit the API too quickly.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>50x - Server Errors</td>
+                                    <td>Something went wrong on Outkit end.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="magic-block-callout type-info ">
+                          <h3><i title="Info" class="fa fa-info-circle"></i>Error codes
+                          </h3>
+                          <div class="callout-body">
+                            <div class="marked-table">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Code</th>
+                                    <th>Description</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><code>bad_data</code></td>
+                                    <td>Something was wrong or invalid in the input data</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td><code>config_issue</code></td>
+                                    <td>Your account is not correctly/fully configured</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-client-libraries" class="hub-reference">
+                  <a id="client-libraries" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>Client libraries</h2>
+                        <div class="excerpt"></div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                        <div class="magic-block-textarea">
+                          <p>The easiest way to use our API is by using a client library. We currently offer official client libraries for the following libraries:</p>
+                          <ul>
+                            <li ><a href="https://github.com/outkit/javascript-client" target="_self">JavaScript</a></li>
+                            <li ><a href="https://github.com/outkit/php-client" target="_self">PHP</a></li>
+                            <li ><a href="https://github.com/outkit/elixir-client" target="_self">Elixir</a></li>
+                          </ul>
+                          <p>We also plan to release official libraries for the following languages in the next few months:</p>
+                          <ul>
+                            <li ><a href="https://github.com/outkit/java-client" target="_self">Java</a></li>
+                            <li ><a href="https://github.com/outkit/go-client" target="_self">Go</a></li>
+                            <li ><a href="https://github.com/outkit/rust-client" target="_self">Rust</a></li>
+                            <li ><a href="https://github.com/outkit/swift-client" target="_self">Swift</a></li>
+                            <li ><a href="https://github.com/outkit/ruby-client" target="_self">Ruby</a></li>
+                            <li ><a href="https://github.com/outkit/python-client" target="_self">Python</a></li>
+                            <li ><a href="https://github.com/outkit/csharp-client" target="_self">C#</a></li>
+                            <li ><a href="https://github.com/outkit/cpp-client" target="_self">C++</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-message" class="hub-reference">
+                  <a id="message" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>Message</h2>
+                        <div class="excerpt"></div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                        <div class="magic-block-textarea">
+                          <p>The Message object represents a message to be rendered and/or delivered.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-outkitmessagesshow-1" class="hub-reference">
+                  <a id="outkitmessagesshow-1" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>/messages/{id}</h2>
+                        <div class="excerpt">
+                          <p>Retrieve message</p>
+                        </div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <form ng-submit="tryItOut()" ng-controller="Endpoint" ng-init="setSlug('outkitmessagesshow-1')" name="endpointForm" class="hub-api">
+                    <div class="api-definition-parent">
+                      <div class="api-definition">
+                        <div class="api-definition-container">
+                          <!-- Don't show try it now button if host isn't set--><!-- if doc.apiSettings.host-->
+                          <div class="api-definition-actions"><button type="submit" ng-disabled="results.loading" ng-class="{active: endpointForm.$dirty}" class="api-try-it-out"><span ng-show="!results.loading" class="fa fa-compass"></span>&nbsp;<span ng-show="!results.loading">Try It</span><i ng-show="results.loading" class="fa fa-circle-o-notch fa-spin ng-cloak"></i></button></div>
+                          <span class="pg-type-big pg-type type-get">get</span><!-- Show relative path if base path isn't set-->https://<span class="definition-url"><span>api.outkit.io/v1</span><span>/messages/</span><span class="api-variable">id</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-section hub-reference-section-code">
+                      <div class="hub-reference-left">
+                        <div class="code-sample tabber-parent">
+                          <ul class="code-sample-tabs">
+                            <li><a ng-click="setLanguage('curl')" href="" class="hub-lang-switch-curl">cURL</a></li>
+                            <li><a ng-click="setLanguage('node')" href="" class="hub-lang-switch-node">Node</a></li>
+                            <li><a ng-click="setLanguage('ruby')" href="" class="hub-lang-switch-ruby">Ruby</a></li>
+                            <li><a ng-click="setLanguage('javascript')" href="" class="hub-lang-switch-javascript">JavaScript</a></li>
+                            <li><a ng-click="setLanguage('python')" href="" class="hub-lang-switch-python">Python</a></li>
+                          </ul>
+                          <div class="hub-code-auto">
+                            <i ng-show="codeLoading" class="icon icon-sync icon-spin ng-cloak"></i>
+                            <pre class="tomorrow-night hub-lang hub-lang-curl"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-builtin">curl</span> <span class="cm-attribute">--request</span> GET \
+  <span class="cm-attribute">--url</span> https:&#47;&#47;api.outkit.io&#47;v1&#47;messages&#47;<span class="hub-code-param-empty">id</span></span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-node"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">var</span> <span class="cm-variable">request</span> <span class="cm-operator">=</span> <span class="cm-variable">require</span>(<span class="cm-string">"request"</span>);
+
+<span class="cm-keyword">var</span> <span class="cm-variable">options</span> <span class="cm-operator">=</span> { <span class="cm-property">method</span>: <span class="cm-string">'GET'</span>,
+  <span class="cm-property">url</span>: <span class="cm-string">'https:&#47;&#47;api.outkit.io&#47;v1&#47;messages&#47;<span class="hub-code-param-empty">id</span>'</span> };
+
+<span class="cm-variable">request</span>(<span class="cm-variable">options</span>, <span class="cm-keyword">function</span> (<span class="cm-def">error</span>, <span class="cm-def">response</span>, <span class="cm-def">body</span>) {
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">error</span>) <span class="cm-keyword">throw</span> <span class="cm-keyword">new</span> <span class="cm-variable">Error</span>(<span class="cm-variable-2">error</span>);
+
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">body</span>);
+});
+</span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-ruby"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">require</span> <span class="cm-string">'uri'</span>
+<span class="cm-keyword">require</span> <span class="cm-string">'net&#47;http'</span>
+
+<span class="cm-variable">url</span> <span class="cm-operator">=</span> <span class="cm-tag">URI</span>(<span class="cm-string">"https:&#47;&#47;api.outkit.io&#47;v1&#47;messages&#47;<span class="hub-code-param-empty">id</span>"</span>)
+
+<span class="cm-variable">http</span> <span class="cm-operator">=</span> <span class="cm-atom">Net::HTTP</span><span class="cm-operator">.</span><span class="cm-property">new</span>(<span class="cm-variable">url</span><span class="cm-operator">.</span><span class="cm-property">host</span>, <span class="cm-variable">url</span><span class="cm-operator">.</span><span class="cm-property">port</span>)
+<span class="cm-variable">http</span><span class="cm-operator">.</span><span class="cm-property">use_ssl</span> <span class="cm-operator">=</span> <span class="cm-keyword">true</span>
+
+<span class="cm-variable">request</span> <span class="cm-operator">=</span> <span class="cm-atom">Net::HTTP::</span><span class="cm-tag">Get</span><span class="cm-operator">.</span><span class="cm-property">new</span>(<span class="cm-variable">url</span>)
+
+<span class="cm-variable">response</span> <span class="cm-operator">=</span> <span class="cm-variable">http</span><span class="cm-operator">.</span><span class="cm-property">request</span>(<span class="cm-variable">request</span>)
+<span class="cm-variable">puts</span> <span class="cm-variable">response</span><span class="cm-operator">.</span><span class="cm-property">read_body</span></span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-javascript"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">var</span> <span class="cm-variable">data</span> <span class="cm-operator">=</span> <span class="cm-variable">JSON</span>.<span class="cm-property">stringify</span>(<span class="cm-atom">false</span>);
+
+<span class="cm-keyword">var</span> <span class="cm-variable">xhr</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">XMLHttpRequest</span>();
+<span class="cm-variable">xhr</span>.<span class="cm-property">withCredentials</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span>;
+
+<span class="cm-variable">xhr</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"readystatechange"</span>, <span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">if</span> (<span class="cm-keyword">this</span>.<span class="cm-property">readyState</span> <span class="cm-operator">===</span> <span class="cm-keyword">this</span>.<span class="cm-property">DONE</span>) {
+    <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">this</span>.<span class="cm-property">responseText</span>);
+  }
+});
+
+<span class="cm-variable">xhr</span>.<span class="cm-property">open</span>(<span class="cm-string">"GET"</span>, <span class="cm-string">"https:&#47;&#47;api.outkit.io&#47;v1&#47;messages&#47;<span class="hub-code-param-empty">id</span>"</span>);
+
+<span class="cm-variable">xhr</span>.<span class="cm-property">send</span>(<span class="cm-variable">data</span>);</span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-python"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">import</span> <span class="cm-variable">requests</span>
+
+<span class="cm-variable">url</span> = <span class="cm-string">"https:&#47;&#47;api.outkit.io&#47;v1&#47;messages&#47;<span class="hub-code-param-empty">id</span>"</span>
+
+<span class="cm-variable">response</span> = <span class="cm-variable">requests</span>.<span class="cm-variable">request</span>(<span class="cm-string">"GET"</span>, <span class="cm-variable">url</span>)
+
+<span class="cm-keyword">print</span>(<span class="cm-variable">response</span>.<span class="cm-variable">text</span>)</span></span></pre>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div class="hub-reference-right hub-reference-results tabber-parent">
+                        <div class="hub-reference-results-slider">
+                          <div class="hub-reference-results-explorer code-sample">
+                            <div ng-if="results.init">
+                              <ul class="code-sample-tabs hub-reference-results-header"><a href="" data-tab="result" class="hub-reference-results-header-item tabber-tab"><span ng-class="{httpsuccess: results.statusCode[2] == 'success', httperror: results.statusCode[2] != 'success'}"><i class="fa fa-circle"></i><em>&nbsp;{{ results.statusCode[0] }}&nbsp;</em>{{ results.statusCode[1] }}</span></a><a href="" data-tab="metadata" class="hub-reference-results-header-item tabber-tab">Metadata</a></ul>
+                              <div class="tabber-body tabber-body-result">
+                                <pre ng-show="results.statusCode[0] != 401" class="tomorrow-night"><div ng-if="results.isBinary"><div><i>A binary file was returned</i></div></div><div ng-if="!results.isBinary"><div ng-model="results.dataString" class="cm-s-tomorrow-night codemirror-highlight"></div></div></pre>
+                                <div ng-show="results.statusCode[0] == 401">
+                                  <div class="text-center hub-expired-token">
+                                    <p>You couldn't be authenticated</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="hub-reference-results-meta tabber-body-metadata tabber-body">
+                                <div class="meta">
+                                  <label>Method</label>
+                                  <div>{{ results.method }}</div>
+                                </div>
+                                <div class="meta">
+                                  <label>URL</label>
+                                  <div>{{ results.url }}</div>
+                                </div>
+                                <div class="meta">
+                                  <label>Request Headers</label>
+                                  <pre>{{ results.requestHeaders }}</pre>
+                                </div>
+                                <div class="meta">
+                                  <label>Request Data</label>
+                                  <pre>{{ results.data }}</pre>
+                                </div>
+                                <div class="meta"><label>Status</label><span ng-model="results.statusCode" class="httpstatus"></span></div>
+                                <div class="meta">
+                                  <label>Response Headers</label>
+                                  <pre>{{ results.responseHeaders }}</pre>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Example results-->
+                          <div class="hub-reference-results-examples code-sample">
+                            <div class="hub-no-code">Try the API to see results</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-section">
+                      <div class="hub-reference-left">
+                        <div class="api-manager">
+                          <div class="param-table">
+                            <div class="param-header">
+                              <h3>Path Params</h3>
+                              <!-- We need this to have a border...-->
+                              <div class="param-header-border"></div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>id</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <div class="param-item-required">required</div>
+                                    <p>Message ID</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.path['id']" required="required" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hub-reference-right switcher">
+                        <div class="hub-reference-response-definitions">
+                          <h3>
+                            <div class="pull-right">
+                              <select class="switcher-switch">
+                                <option value="200">200</option>
+                                <option value="404">404</option>
+                              </select>
+                            </div>
+                            Response
+                          </h3>
+                          <div switcher="200" style="">
+                            <p class="desc">Success</p>
+                            <table>
+                              <tr>
+                                <th>data</th>
+                                <td>
+                                  object
+                                  <p>A message to be rendered and/or delivered</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.type</th>
+                                <td>
+                                  string
+                                  <p>Message type</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.to</th>
+                                <td>
+                                  string
+                                  <p>Recipient address (format depends on backend)</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.text_template_body</th>
+                                <td>
+                                  string
+                                  <p>Inline template body for the plain text part</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.text_body</th>
+                                <td>
+                                  string
+                                  <p>Skip rendering, use this for the plain text part of the message body</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.test</th>
+                                <td>
+                                  boolean
+                                  <p>If true, use test semantics for this message</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.template_styles</th>
+                                <td>
+                                  string
+                                  <p>Inline styles to be applied to inline HTML template body</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.template_id</th>
+                                <td>
+                                  string
+                                  <p>Template to use, identified by ID</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.template</th>
+                                <td>
+                                  string
+                                  <p>Template to use, identified by identifier</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.sync</th>
+                                <td>
+                                  boolean
+                                  <p>If true, wait for rendering and delivery (unless render-only) to take place before returning</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.subject</th>
+                                <td>
+                                  string
+                                  <p>Message subject (if applicable)</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.render_only</th>
+                                <td>
+                                  boolean
+                                  <p>If true, skip delivery, just render the message</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.project_id</th>
+                                <td>
+                                  string
+                                  <p>Project ID - either this or &#39;project&#39; is required</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.project</th>
+                                <td>
+                                  string
+                                  <p>Project identifier - either this or &#39;project_id&#39; is required</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.id_from_submitter</th>
+                                <td>
+                                  string
+                                  <p>Optional ID from submitter for cross-reference purposes, not used by Outkit</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.html_template_body</th>
+                                <td>
+                                  string
+                                  <p>Inline template body for HTML part</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.html_body</th>
+                                <td>
+                                  string
+                                  <p>Skip rendering, use this for the HTML part of the message body</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.from</th>
+                                <td>
+                                  string
+                                  <p>From address (format depends on backend)</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.data</th>
+                                <td>
+                                  object
+                                  <p>Locals for templates</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.backend_id</th>
+                                <td>
+                                  string
+                                  <p>Backend to use, identified by ID</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.backend</th>
+                                <td>
+                                  string
+                                  <p>Backend to use, identified by identifier</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div switcher="404" style="display: none;">
+                            <p class="desc">Not found</p>
+                            <table>
+                              <tr>
+                                <th>error</th>
+                                <td>
+                                  object
+                                  <p>A typical the error response</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>error.message</th>
+                                <td>
+                                  string
+                                  <p>An error message with more details</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>error.code</th>
+                                <td>
+                                  string
+                                  <p>A text-based code that is common to a class of errors</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="page-outkitmessagescreate-1" class="hub-reference">
+                  <a id="outkitmessagescreate-1" class="anchor-page-title"></a>
+                  <div class="hub-reference-section hub-reference-section-top">
+                    <div class="hub-reference-left">
+                      <header>
+                        <h2>/messages</h2>
+                        <div class="excerpt">
+                          <p>Create message</p>
+                        </div>
+                      </header>
+                    </div>
+                    <div class="hub-reference-right">&nbsp;</div>
+                  </div>
+                  <form ng-submit="tryItOut()" ng-controller="Endpoint" ng-init="setSlug('outkitmessagescreate-1')" name="endpointForm" class="hub-api">
+                    <div class="api-definition-parent">
+                      <div class="api-definition">
+                        <div class="api-definition-container">
+                          <!-- Don't show try it now button if host isn't set--><!-- if doc.apiSettings.host-->
+                          <div class="api-definition-actions"><button type="submit" ng-disabled="results.loading" ng-class="{active: endpointForm.$dirty}" class="api-try-it-out"><span ng-show="!results.loading" class="fa fa-compass"></span>&nbsp;<span ng-show="!results.loading">Try It</span><i ng-show="results.loading" class="fa fa-circle-o-notch fa-spin ng-cloak"></i></button></div>
+                          <span class="pg-type-big pg-type type-post">post</span><!-- Show relative path if base path isn't set-->https://<span class="definition-url"><span>api.outkit.io/v1</span><span>/messages</span></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-section hub-reference-section-code">
+                      <div class="hub-reference-left">
+                        <div class="code-sample tabber-parent">
+                          <ul class="code-sample-tabs">
+                            <li><a ng-click="setLanguage('curl')" href="" class="hub-lang-switch-curl">cURL</a></li>
+                            <li><a ng-click="setLanguage('node')" href="" class="hub-lang-switch-node">Node</a></li>
+                            <li><a ng-click="setLanguage('ruby')" href="" class="hub-lang-switch-ruby">Ruby</a></li>
+                            <li><a ng-click="setLanguage('javascript')" href="" class="hub-lang-switch-javascript">JavaScript</a></li>
+                            <li><a ng-click="setLanguage('python')" href="" class="hub-lang-switch-python">Python</a></li>
+                          </ul>
+                          <div class="hub-code-auto">
+                            <i ng-show="codeLoading" class="icon icon-sync icon-spin ng-cloak"></i>
+                            <pre class="tomorrow-night hub-lang hub-lang-curl"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-builtin">curl</span> <span class="cm-attribute">--request</span> POST \
+  <span class="cm-attribute">--url</span> https:&#47;&#47;api.outkit.io&#47;v1&#47;messages</span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-node"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">var</span> <span class="cm-variable">request</span> <span class="cm-operator">=</span> <span class="cm-variable">require</span>(<span class="cm-string">"request"</span>);
+
+<span class="cm-keyword">var</span> <span class="cm-variable">options</span> <span class="cm-operator">=</span> { <span class="cm-property">method</span>: <span class="cm-string">'POST'</span>, <span class="cm-property">url</span>: <span class="cm-string">'https:&#47;&#47;api.outkit.io&#47;v1&#47;messages'</span> };
+
+<span class="cm-variable">request</span>(<span class="cm-variable">options</span>, <span class="cm-keyword">function</span> (<span class="cm-def">error</span>, <span class="cm-def">response</span>, <span class="cm-def">body</span>) {
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">error</span>) <span class="cm-keyword">throw</span> <span class="cm-keyword">new</span> <span class="cm-variable">Error</span>(<span class="cm-variable-2">error</span>);
+
+  <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable-2">body</span>);
+});
+</span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-ruby"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">require</span> <span class="cm-string">'uri'</span>
+<span class="cm-keyword">require</span> <span class="cm-string">'net&#47;http'</span>
+
+<span class="cm-variable">url</span> <span class="cm-operator">=</span> <span class="cm-tag">URI</span>(<span class="cm-string">"https:&#47;&#47;api.outkit.io&#47;v1&#47;messages"</span>)
+
+<span class="cm-variable">http</span> <span class="cm-operator">=</span> <span class="cm-atom">Net::HTTP</span><span class="cm-operator">.</span><span class="cm-property">new</span>(<span class="cm-variable">url</span><span class="cm-operator">.</span><span class="cm-property">host</span>, <span class="cm-variable">url</span><span class="cm-operator">.</span><span class="cm-property">port</span>)
+<span class="cm-variable">http</span><span class="cm-operator">.</span><span class="cm-property">use_ssl</span> <span class="cm-operator">=</span> <span class="cm-keyword">true</span>
+
+<span class="cm-variable">request</span> <span class="cm-operator">=</span> <span class="cm-atom">Net::HTTP::</span><span class="cm-tag">Post</span><span class="cm-operator">.</span><span class="cm-property">new</span>(<span class="cm-variable">url</span>)
+
+<span class="cm-variable">response</span> <span class="cm-operator">=</span> <span class="cm-variable">http</span><span class="cm-operator">.</span><span class="cm-property">request</span>(<span class="cm-variable">request</span>)
+<span class="cm-variable">puts</span> <span class="cm-variable">response</span><span class="cm-operator">.</span><span class="cm-property">read_body</span></span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-javascript"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">var</span> <span class="cm-variable">data</span> <span class="cm-operator">=</span> <span class="cm-variable">JSON</span>.<span class="cm-property">stringify</span>(<span class="cm-atom">false</span>);
+
+<span class="cm-keyword">var</span> <span class="cm-variable">xhr</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">XMLHttpRequest</span>();
+<span class="cm-variable">xhr</span>.<span class="cm-property">withCredentials</span> <span class="cm-operator">=</span> <span class="cm-atom">true</span>;
+
+<span class="cm-variable">xhr</span>.<span class="cm-property">addEventListener</span>(<span class="cm-string">"readystatechange"</span>, <span class="cm-keyword">function</span> () {
+  <span class="cm-keyword">if</span> (<span class="cm-keyword">this</span>.<span class="cm-property">readyState</span> <span class="cm-operator">===</span> <span class="cm-keyword">this</span>.<span class="cm-property">DONE</span>) {
+    <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-keyword">this</span>.<span class="cm-property">responseText</span>);
+  }
+});
+
+<span class="cm-variable">xhr</span>.<span class="cm-property">open</span>(<span class="cm-string">"POST"</span>, <span class="cm-string">"https:&#47;&#47;api.outkit.io&#47;v1&#47;messages"</span>);
+
+<span class="cm-variable">xhr</span>.<span class="cm-property">send</span>(<span class="cm-variable">data</span>);</span></span></pre>
+                            <pre class="tomorrow-night hub-lang hub-lang-python"><span class="cm-s-tomorrow-night"><span class='cm-s-tomorrow-night'><span class="cm-keyword">import</span> <span class="cm-variable">requests</span>
+
+<span class="cm-variable">url</span> = <span class="cm-string">"https:&#47;&#47;api.outkit.io&#47;v1&#47;messages"</span>
+
+<span class="cm-variable">response</span> = <span class="cm-variable">requests</span>.<span class="cm-variable">request</span>(<span class="cm-string">"POST"</span>, <span class="cm-variable">url</span>)
+
+<span class="cm-keyword">print</span>(<span class="cm-variable">response</span>.<span class="cm-variable">text</span>)</span></span></pre>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                      <div class="hub-reference-right hub-reference-results tabber-parent">
+                        <div class="hub-reference-results-slider">
+                          <div class="hub-reference-results-explorer code-sample">
+                            <div ng-if="results.init">
+                              <ul class="code-sample-tabs hub-reference-results-header"><a href="" data-tab="result" class="hub-reference-results-header-item tabber-tab"><span ng-class="{httpsuccess: results.statusCode[2] == 'success', httperror: results.statusCode[2] != 'success'}"><i class="fa fa-circle"></i><em>&nbsp;{{ results.statusCode[0] }}&nbsp;</em>{{ results.statusCode[1] }}</span></a><a href="" data-tab="metadata" class="hub-reference-results-header-item tabber-tab">Metadata</a></ul>
+                              <div class="tabber-body tabber-body-result">
+                                <pre ng-show="results.statusCode[0] != 401" class="tomorrow-night"><div ng-if="results.isBinary"><div><i>A binary file was returned</i></div></div><div ng-if="!results.isBinary"><div ng-model="results.dataString" class="cm-s-tomorrow-night codemirror-highlight"></div></div></pre>
+                                <div ng-show="results.statusCode[0] == 401">
+                                  <div class="text-center hub-expired-token">
+                                    <p>You couldn't be authenticated</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="hub-reference-results-meta tabber-body-metadata tabber-body">
+                                <div class="meta">
+                                  <label>Method</label>
+                                  <div>{{ results.method }}</div>
+                                </div>
+                                <div class="meta">
+                                  <label>URL</label>
+                                  <div>{{ results.url }}</div>
+                                </div>
+                                <div class="meta">
+                                  <label>Request Headers</label>
+                                  <pre>{{ results.requestHeaders }}</pre>
+                                </div>
+                                <div class="meta">
+                                  <label>Request Data</label>
+                                  <pre>{{ results.data }}</pre>
+                                </div>
+                                <div class="meta"><label>Status</label><span ng-model="results.statusCode" class="httpstatus"></span></div>
+                                <div class="meta">
+                                  <label>Response Headers</label>
+                                  <pre>{{ results.responseHeaders }}</pre>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Example results-->
+                          <div class="hub-reference-results-examples code-sample">
+                            <div class="hub-no-code">Try the API to see results</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hub-reference-section">
+                      <div class="hub-reference-left">
+                        <div class="api-manager">
+                          <div class="param-table">
+                            <div class="param-header">
+                              <h3>Body Params</h3>
+                              <!-- We need this to have a border...-->
+                              <div class="param-header-border"></div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message</strong>
+                                <div class="param-type">object</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>A message to be rendered and/or delivered</p>
+                                  </div>
+                                  <div class="param-item-input">&nbsp;</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.type</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <div class="param-item-required">required</div>
+                                    <p>Message type</p>
+                                  </div>
+                                  <div class="param-item-input">
+                                    <div class="selectize">
+                                      <select ng-model="values.body['message.type']" required="required">
+                                        <option>email</option>
+                                        <option>sms</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.to</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <div class="param-item-required">required</div>
+                                    <p>Recipient address (format depends on backend)</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.to']" required="required" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.text_template_body</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Inline template body for the plain text part</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.text_template_body']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.text_body</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Skip rendering, use this for the plain text part of the message body</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.text_body']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.test</strong>
+                                <div class="param-type">boolean</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>If true, use test semantics for this message</p>
+                                  </div>
+                                  <div class="param-item-input">
+                                    <div class="selectize">
+                                      <select ng-model="values.body['message.test']">
+                                        <option value="true">true</option>
+                                        <option value="false">false</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.template_styles</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Inline styles to be applied to inline HTML template body</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.template_styles']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.template_id</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Template to use, identified by ID</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.template_id']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.template</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Template to use, identified by identifier</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.template']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.sync</strong>
+                                <div class="param-type">boolean</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>If true, wait for rendering and delivery (unless render-only) to take place before returning</p>
+                                  </div>
+                                  <div class="param-item-input">
+                                    <div class="selectize">
+                                      <select ng-model="values.body['message.sync']">
+                                        <option value="true">true</option>
+                                        <option value="false">false</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.subject</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Message subject (if applicable)</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.subject']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.render_only</strong>
+                                <div class="param-type">boolean</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>If true, skip delivery, just render the message</p>
+                                  </div>
+                                  <div class="param-item-input">
+                                    <div class="selectize">
+                                      <select ng-model="values.body['message.render_only']">
+                                        <option value="true">true</option>
+                                        <option value="false">false</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.project_id</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Project ID - either this or &#39;project&#39; is required</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.project_id']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.project</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Project identifier - either this or &#39;project_id&#39; is required</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.project']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.id_from_submitter</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Optional ID from submitter for cross-reference purposes, not used by Outkit</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.id_from_submitter']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.html_template_body</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Inline template body for HTML part</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.html_template_body']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.html_body</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Skip rendering, use this for the HTML part of the message body</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.html_body']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.from</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>From address (format depends on backend)</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.from']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.data</strong>
+                                <div class="param-type">object</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Locals for templates</p>
+                                  </div>
+                                  <div class="param-item-input">&nbsp;</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.backend_id</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Backend to use, identified by ID</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.backend_id']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="param-item">
+                              <div class="param-item-name">
+                                <strong>message.backend</strong>
+                                <div class="param-type">string</div>
+                              </div>
+                              <div class="param-item-info">
+                                <div class="param-item-table">
+                                  <div class="param-item-desc">
+                                    <p>Backend to use, identified by identifier</p>
+                                  </div>
+                                  <div class="param-item-input"><input type="text" ng-model="values.body['message.backend']" class="full"/></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="hub-reference-right switcher">
+                        <div class="hub-reference-response-definitions">
+                          <h3>
+                            <div class="pull-right">
+                              <select class="switcher-switch">
+                                <option value="200">200</option>
+                                <option value="422">422</option>
+                              </select>
+                            </div>
+                            Response
+                          </h3>
+                          <div switcher="200" style="">
+                            <p class="desc">Success</p>
+                            <table>
+                              <tr>
+                                <th>data</th>
+                                <td>
+                                  object
+                                  <p>A message to be rendered and/or delivered</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.type</th>
+                                <td>
+                                  string
+                                  <p>Message type</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.to</th>
+                                <td>
+                                  string
+                                  <p>Recipient address (format depends on backend)</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.text_template_body</th>
+                                <td>
+                                  string
+                                  <p>Inline template body for the plain text part</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.text_body</th>
+                                <td>
+                                  string
+                                  <p>Skip rendering, use this for the plain text part of the message body</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.test</th>
+                                <td>
+                                  boolean
+                                  <p>If true, use test semantics for this message</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.template_styles</th>
+                                <td>
+                                  string
+                                  <p>Inline styles to be applied to inline HTML template body</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.template_id</th>
+                                <td>
+                                  string
+                                  <p>Template to use, identified by ID</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.template</th>
+                                <td>
+                                  string
+                                  <p>Template to use, identified by identifier</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.sync</th>
+                                <td>
+                                  boolean
+                                  <p>If true, wait for rendering and delivery (unless render-only) to take place before returning</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.subject</th>
+                                <td>
+                                  string
+                                  <p>Message subject (if applicable)</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.render_only</th>
+                                <td>
+                                  boolean
+                                  <p>If true, skip delivery, just render the message</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.project_id</th>
+                                <td>
+                                  string
+                                  <p>Project ID - either this or &#39;project&#39; is required</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.project</th>
+                                <td>
+                                  string
+                                  <p>Project identifier - either this or &#39;project_id&#39; is required</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.id_from_submitter</th>
+                                <td>
+                                  string
+                                  <p>Optional ID from submitter for cross-reference purposes, not used by Outkit</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.html_template_body</th>
+                                <td>
+                                  string
+                                  <p>Inline template body for HTML part</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.html_body</th>
+                                <td>
+                                  string
+                                  <p>Skip rendering, use this for the HTML part of the message body</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.from</th>
+                                <td>
+                                  string
+                                  <p>From address (format depends on backend)</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.data</th>
+                                <td>
+                                  object
+                                  <p>Locals for templates</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.backend_id</th>
+                                <td>
+                                  string
+                                  <p>Backend to use, identified by ID</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>data.backend</th>
+                                <td>
+                                  string
+                                  <p>Backend to use, identified by identifier</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div switcher="422" style="display: none;">
+                            <p class="desc">Unprocessable entity</p>
+                            <table>
+                              <tr>
+                                <th>error</th>
+                                <td>
+                                  object
+                                  <p>A typical the error response</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>error.message</th>
+                                <td>
+                                  string
+                                  <p>An error message with more details</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>error.code</th>
+                                <td>
+                                  string
+                                  <p>A text-based code that is common to a class of errors</p>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="hub-reference-section">
+                    <div class="hub-reference-left">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                    <div class="hub-reference-right">
+                      <div class="content-body">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hub-reference-end"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script>
+      var is_hub = true;
+      var is_hub2 = true;
+      var is_hub_edit = true;
+    </script>
+    <script src="../assets/bundle-hub2.js"></script>
+    <script id="hub-me" type="application/json" data-json="{&quot;oauthEnabled&quot;:false,&quot;isAdmin&quot;:true,&quot;user&quot;:{&quot;name&quot;:&quot;Stian Grytøyr&quot;,&quot;email&quot;:&quot;stiangx+readme@gmail.com&quot;},&quot;loggedIn&quot;:true,&quot;_id&quot;:&quot;5a66ed7bd11cd6001e7b51b4&quot;,&quot;search&quot;:{&quot;app&quot;:&quot;T28YKFATPY&quot;,&quot;children&quot;:[{&quot;subdomain&quot;:&quot;outkit&quot;,&quot;id&quot;:&quot;5a66ed68cfe9c4001c3b02f8&quot;,&quot;token&quot;:&quot;NDA3ODdiYzc3OGEwMTNhMzllYjFmMjc2YzNiMzJlZDc2OGMyZGI3MDkyNWY1ZWZlZDQwNjBhNmU2YTFmZTQ2NnRhZ0ZpbHRlcnM9cHJvamVjdDo1YTY2ZWQ2OGNmZTljNDAwMWMzYjAyZjgsKHZlcnNpb246bm9uZSx2ZXJzaW9uOjVhNjZlZDY4Y2ZlOWM0MDAxYzNiMDJmYiksKGhpZGRlbjpub25lLGhpZGRlbjpmYWxzZSksKGluZGV4OlBhZ2UsaW5kZXg6Q3VzdG9tUGFnZSxpbmRleDpEaXNjdXNzKQ==&quot;,&quot;modules&quot;:{&quot;landing&quot;:true,&quot;docs&quot;:true,&quot;examples&quot;:true,&quot;reference&quot;:true,&quot;blog&quot;:false,&quot;discuss&quot;:true,&quot;suggested_edits&quot;:true,&quot;logs&quot;:false},&quot;filters&quot;:&quot;tagFilters=project:5a66ed68cfe9c4001c3b02f8,(version:none,version:5a66ed68cfe9c4001c3b02fb),(hidden:none,hidden:false),(index:Page,index:CustomPage,index:Discuss)&quot;}]}}"></script>
+  </body>
+</html>

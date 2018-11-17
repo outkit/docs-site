@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Outkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="What is Outkit? How does it work?">
+    <meta property="og:description" content="The high-level overview">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Application styles-->
+    <link rel="stylesheet" href="../../assets/bundle-hub2.css">
+    <!-- Custom CSS-->
+    <style>
+      a {
+        color: #343c54;
+      }
+      a:hover {
+        color: #0d0f15;
+      }
+      a.text-muted:hover {
+        color: #343c54;
+      }
+      .btn.btn-primary {
+        background-color: #343c54;
+      }
+      .btn.btn-primary:hover {
+        background-color: #0d0f15;
+      }
+      .theme-line #hub-landing-top h2 {
+        color: #343c54;
+      }
+      #hub-landing-top .btn:hover {
+        color: #343c54;
+      }
+      .theme-line #hub-landing-top .btn:hover {
+        color: #fff;
+      }
+      .theme-solid header#hub-header #header-top {
+        background-color: #343c54;
+      }
+      .theme-solid.header-gradient header#hub-header #header-top {
+        background: linear-gradient(to bottom, #343c54, #171a25);
+      }
+      .theme-solid.header-custom header#hub-header #header-top {
+        background-image: url(undefined);
+      }
+      .theme-line header#hub-header #header-top {
+        border-bottom-color: #343c54;
+      }
+     .theme-line header#hub-header #header-top .btn {
+        background-color: #343c54;
+      }
+
+      header#hub-header #header-top #header-logo {
+        width: 119px;
+        height: 40px;
+        margin-top: 0;
+        background-image: url(../../assets/e6b38a5-small-Screenshot_2018-01-23_10.46.23.png);
+      }
+      nav#hub-sidebar ul a.active {
+        background-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader .hub-subheader-breadcrumbs .dropdown-menu a:hover {
+        background-color: #343c54;
+      }
+      .discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button {
+        background-color: #343c54;
+      }
+      section#hub-discuss .discussion a .discuss-body h4 {
+        color: #343c54;
+      }
+      section#hub-discuss .discussion a:hover .discuss-body h4 {
+        color: #0d0f15;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky {
+        border-bottom-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box {
+        border-bottom-color: #343c54;
+      }
+      #hub-search-results h3 em {
+        color: #343c54;
+      }
+      .main_background, .tag-item {
+        background: #343c54 !important;
+      }
+      .main_background:hover {
+        background: #0d0f15 !important;
+      }
+      .main_color {
+        color: #343c54 !important;
+      }
+      .main_color_hover:hover {
+        color: #343c54 !important;
+      }
+      section#hub-discuss h1 {
+        color: #343c54;
+      }
+      #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=number]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=text]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input textarea:focus {
+        border: 1px solid #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active {
+        border-color: #343c54;
+        background-color: #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active:hover {
+        background-color: #0d0f15;
+        border-color: #0d0f15;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out:hover {
+        border-color: #343c54;
+        color: #343c54;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-left header .hub-reference-edit:hover {
+        color: #343c54;
+      }
+      .main-color-accent {
+        border-bottom: 3px solid #343c54;
+        padding-bottom: 8px;
+      }
+      #hub-reference .hub-reference .hub-reference-section p, #hub-reference .hub-reference .hub-reference-section table, #hub-reference .hub-reference .hub-reference-section ul, .content-body .magic-block-api-header ol li, .content-body .magic-block-api-header ul li, .content-body .magic-block-textarea ol li, .content-body .magic-block-textarea ul li, ol, p, ul {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-right {
+        width: 600px;
+      }
+      .hub-reference-right .marked-table {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body class="body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal ">
+    <header id="hub-header">
+      <div id="header-top">
+        <div class="hub-container">
+          <div class="clearfix">
+            <a href="/" class="header-link">
+              <h1 id="header-logo">Outkit</h1>
+            </a>
+            <nav>
+              <ul id="header-nav-left">
+                <li><a href="../docs/index.html" title="Guides">Guides</a></li>
+                <li><a href="../reference/index.html" title="API Reference">API Reference</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="hub-landing-top" class="hub-landing-buttons">
+            <h2>The Outkit Support and Developer Hub</h2>
+            <div class="hub-landing-description">
+              <p>Welcome to the Outkit support and developer hub. Here you&#39;ll find comprehensive guides and documentation to help you start working with Outkit as quickly as possible, as well as support if you get stuck. Let&#39;s jump right in!</p>
+            </div>
+            <a href="" class="btn btn-lg btn-primary"><i class="fa fa-rocket"></i>Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class="btn btn-lg btn-primary"><i class="icon icon-documentation"></i><span>Guides</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="hub-subheader-parent">
+        <div id="hub-subheader">
+          <div class="hub-container">
+            <nav id="header-bottom-nav">
+              <div id="header-icon-nav">
+                <div class="icons">
+                  <div class="hub-subheader-breadcrumbs">
+                    <span class="hub-breadcrumb-item"><span>v1.0</span></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="hub-container">
+      <div class="hub-container">
+        <div id="hub-sidebar-parent" class="hub-sidebar-sticky">
+          <nav id="hub-sidebar">
+            <div class="scrollable-parent">
+              <scrollable scroll-to-top="state.current().root">
+                <div id="hub-sidebar-content">
+                  <div>
+                    <h3>Documentation</h3>
+                    <ul>
+                      <li>
+                        <a href="./index.html" class="text-overflow">What is Outkit? How does it work?</a>
+                      </li>
+                      <li>
+                        <a href="./getting-started.html" class="text-overflow">Getting Started</a>
+                      </li>
+                      <li>
+                        <a href="./messages.html" class="text-overflow">Messages</a>
+                      </li>
+                      <li>
+                        <a href="./templates.html" class="text-overflow">Template Concepts</a>
+                      </li>
+                      <li>
+                        <a href="./template-editor.html" class="text-overflow">Template Editor</a>
+                      </li>
+                      <li>
+                        <a href="./projects.html" class="text-overflow">Projects</a>
+                      </li>
+                      <li>
+                        <a href="./backends.html" class="text-overflow">Backends</a>
+                      </li>
+                      <li>
+                        <a href="./webhooks.html" class="text-overflow">Webhooks</a>
+                      </li>
+                      <li>
+                        <a href="./teams.html" class="text-overflow">Teams</a>
+                      </li>
+                      <li>
+                        <a href="./search-and-live-feed.html" class="text-overflow active">Search and Live Feed</a>
+                      </li>
+                      <li>
+                        <a href="./using-our-api.html" class="text-overflow">Using our API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </scrollable>
+            </div>
+          </nav>
+        </div>
+
+        <!-- CONTENT GOES HERE -->
+
+        <section id="hub-content">
+          <div class="hub-content-container">
+            <div id="replace-view">
+              <div>
+                <header id="content-head">
+                  <div class="row clearfix">
+                    <div class="col-xs-9">
+                      <h1>Search and Live Feed</h1>
+                      <div class="excerpt">
+                        <p>Giving you full visibility into your messages.</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div id="content-container" class="grid-container-fluid">
+                  <section class="content-body">
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/58c006e-outkit-message-live-feed.gif" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/58c006e-outkit-message-live-feed.gif"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Some messaging solutions feel a bit like a black hole. You submit your message and basically hope for the best. This is one of the problems we have tried to solve with Outkit, by giving you...</p>
+                      <ul>
+                        <li >A searchable archive of every submitted message, whether they succeeded or failed</li>
+                        <li >The ability to see the rendered result, the raw message or the submitted locals/variables for every sent message, </li>
+                        <li >Powerful search that lets you find exactly the message your customer is inquiring about</li>
+                        <li >Access to the full backend response, including status code, headers and both the raw and normalized reply</li>
+                        <li >A live feed of messages as they are received by our systems - watch everything happen in real time</li>
+                        <li >One-click resending of sent (or failed) messages, optionally letting you use a different backend or edit to/from/subject</li>
+                        <li >Graphs that show how many messages (of each type) have been sent for each of your templates, projects, backends and in total</li>
+                      </ul>
+                      <p>We’ll document all of this more thoroughly in the future, but for the most part we hope that you’ll find the UI to be reasonably intuitive. There are also certain cues that are meant to guide you in the right direction, so we encourage you to click around in the UI and try things out.</p>
+                    </div>
+                    <hr>
+                    <div class="nextSteps">
+                      <h3>What's Next</h3>
+                      <p>The best place to start exploring is the Messages tab, especially once you have tried to send a few messages.</p>
+                      <table>
+                        <tr>
+                          <td><a href="./messages.html"><i class="fa fa-chevron-right"></i>Messages</a></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /CONTENT -->
+
+      </div>
+    </div>
+    <!-- Logo-->
+    <footer>
+    </footer>
+  </body>
+</html>

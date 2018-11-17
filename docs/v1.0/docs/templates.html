@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Outkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="What is Outkit? How does it work?">
+    <meta property="og:description" content="The high-level overview">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Application styles-->
+    <link rel="stylesheet" href="../../assets/bundle-hub2.css">
+    <!-- Custom CSS-->
+    <style>
+      a {
+        color: #343c54;
+      }
+      a:hover {
+        color: #0d0f15;
+      }
+      a.text-muted:hover {
+        color: #343c54;
+      }
+      .btn.btn-primary {
+        background-color: #343c54;
+      }
+      .btn.btn-primary:hover {
+        background-color: #0d0f15;
+      }
+      .theme-line #hub-landing-top h2 {
+        color: #343c54;
+      }
+      #hub-landing-top .btn:hover {
+        color: #343c54;
+      }
+      .theme-line #hub-landing-top .btn:hover {
+        color: #fff;
+      }
+      .theme-solid header#hub-header #header-top {
+        background-color: #343c54;
+      }
+      .theme-solid.header-gradient header#hub-header #header-top {
+        background: linear-gradient(to bottom, #343c54, #171a25);
+      }
+      .theme-solid.header-custom header#hub-header #header-top {
+        background-image: url(undefined);
+      }
+      .theme-line header#hub-header #header-top {
+        border-bottom-color: #343c54;
+      }
+     .theme-line header#hub-header #header-top .btn {
+        background-color: #343c54;
+      }
+
+      header#hub-header #header-top #header-logo {
+        width: 119px;
+        height: 40px;
+        margin-top: 0;
+        background-image: url(../../assets/e6b38a5-small-Screenshot_2018-01-23_10.46.23.png);
+      }
+      nav#hub-sidebar ul a.active {
+        background-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader .hub-subheader-breadcrumbs .dropdown-menu a:hover {
+        background-color: #343c54;
+      }
+      .discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button {
+        background-color: #343c54;
+      }
+      section#hub-discuss .discussion a .discuss-body h4 {
+        color: #343c54;
+      }
+      section#hub-discuss .discussion a:hover .discuss-body h4 {
+        color: #0d0f15;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky {
+        border-bottom-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box {
+        border-bottom-color: #343c54;
+      }
+      #hub-search-results h3 em {
+        color: #343c54;
+      }
+      .main_background, .tag-item {
+        background: #343c54 !important;
+      }
+      .main_background:hover {
+        background: #0d0f15 !important;
+      }
+      .main_color {
+        color: #343c54 !important;
+      }
+      .main_color_hover:hover {
+        color: #343c54 !important;
+      }
+      section#hub-discuss h1 {
+        color: #343c54;
+      }
+      #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=number]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=text]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input textarea:focus {
+        border: 1px solid #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active {
+        border-color: #343c54;
+        background-color: #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active:hover {
+        background-color: #0d0f15;
+        border-color: #0d0f15;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out:hover {
+        border-color: #343c54;
+        color: #343c54;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-left header .hub-reference-edit:hover {
+        color: #343c54;
+      }
+      .main-color-accent {
+        border-bottom: 3px solid #343c54;
+        padding-bottom: 8px;
+      }
+      #hub-reference .hub-reference .hub-reference-section p, #hub-reference .hub-reference .hub-reference-section table, #hub-reference .hub-reference .hub-reference-section ul, .content-body .magic-block-api-header ol li, .content-body .magic-block-api-header ul li, .content-body .magic-block-textarea ol li, .content-body .magic-block-textarea ul li, ol, p, ul {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-right {
+        width: 600px;
+      }
+      .hub-reference-right .marked-table {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body class="body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal ">
+    <header id="hub-header">
+      <div id="header-top">
+        <div class="hub-container">
+          <div class="clearfix">
+            <a href="/" class="header-link">
+              <h1 id="header-logo">Outkit</h1>
+            </a>
+            <nav>
+              <ul id="header-nav-left">
+                <li><a href="../docs/index.html" title="Guides">Guides</a></li>
+                <li><a href="../reference/index.html" title="API Reference">API Reference</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="hub-landing-top" class="hub-landing-buttons">
+            <h2>The Outkit Support and Developer Hub</h2>
+            <div class="hub-landing-description">
+              <p>Welcome to the Outkit support and developer hub. Here you&#39;ll find comprehensive guides and documentation to help you start working with Outkit as quickly as possible, as well as support if you get stuck. Let&#39;s jump right in!</p>
+            </div>
+            <a href="" class="btn btn-lg btn-primary"><i class="fa fa-rocket"></i>Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class="btn btn-lg btn-primary"><i class="icon icon-documentation"></i><span>Guides</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="hub-subheader-parent">
+        <div id="hub-subheader">
+          <div class="hub-container">
+            <nav id="header-bottom-nav">
+              <div id="header-icon-nav">
+                <div class="icons">
+                  <div class="hub-subheader-breadcrumbs">
+                    <span class="hub-breadcrumb-item"><span>v1.0</span></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="hub-container">
+      <div class="hub-container">
+        <div id="hub-sidebar-parent" class="hub-sidebar-sticky">
+          <nav id="hub-sidebar">
+            <div class="scrollable-parent">
+              <scrollable scroll-to-top="state.current().root">
+                <div id="hub-sidebar-content">
+                  <div>
+                    <h3>Documentation</h3>
+                    <ul>
+                      <li>
+                        <a href="./index.html" class="text-overflow">What is Outkit? How does it work?</a>
+                      </li>
+                      <li>
+                        <a href="./getting-started.html" class="text-overflow">Getting Started</a>
+                      </li>
+                      <li>
+                        <a href="./messages.html" class="text-overflow">Messages</a>
+                      </li>
+                      <li>
+                        <a href="./templates.html" class="text-overflow active">Template Concepts</a>
+                      </li>
+                      <li>
+                        <a href="./template-editor.html" class="text-overflow">Template Editor</a>
+                      </li>
+                      <li>
+                        <a href="./projects.html" class="text-overflow">Projects</a>
+                      </li>
+                      <li>
+                        <a href="./backends.html" class="text-overflow">Backends</a>
+                      </li>
+                      <li>
+                        <a href="./webhooks.html" class="text-overflow">Webhooks</a>
+                      </li>
+                      <li>
+                        <a href="./teams.html" class="text-overflow">Teams</a>
+                      </li>
+                      <li>
+                        <a href="./search-and-live-feed.html" class="text-overflow">Search and Live Feed</a>
+                      </li>
+                      <li>
+                        <a href="./using-our-api.html" class="text-overflow">Using our API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </scrollable>
+            </div>
+          </nav>
+        </div>
+
+        <!-- CONTENT GOES HERE -->
+
+        <section id="hub-content">
+          <div class="hub-content-container">
+            <div id="replace-view">
+              <div>
+                <header id="content-head">
+                  <div class="row clearfix">
+                    <div class="col-xs-9">
+                      <h1>Template Concepts</h1>
+                      <div class="excerpt">
+                        <p>Save time, use templates. Here’s everything you need to know.</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div id="content-container" scroll-spy class="grid-container-fluid">
+                  <section class="content-body">
+                    <div class="magic-block-textarea">
+                      <p>Templates can be a huge time-saver, but Outkit templates aren’t your ordinary templates. We use <em>inheritance</em> to supercharge them. But what do we mean by that? We’ll get to that shortly, but first a few words on syntax.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="template-syntax"></span>
+                        <div id="section-template-syntax" class="anchor waypoint"></div>
+                        Template syntax<a href="#section-template-syntax" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Our templates support the <a href="https://handlebarsjs.com/" target="_self">Handlebars</a> syntax. Basically, you write normal text or HTML and insert placeholders for variable data with a syntax like this: <code><span ng-non-bindable>&#123;&#123;this_is_a_local&#125;&#125;</span></code>. So, in context that might look something like this:</p>
+                    </div>
+                    <div class="magic-block-code">
+                      <ul class="block-code-header">
+                        <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">Using locals with Handlebars</a></li>
+                      </ul>
+                      <div class="block-code-code">
+                        <span ng-if="tab == 0">
+                          <button ng-click="copyCode(121)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                          <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-121">&lt;h1&gt;Welcome to <span ng-non-bindable>&#123;&#123;product_name&#125;&#125;</span>!&lt;/h1&gt;
+&lt;p&gt;Hi <span ng-non-bindable>&#123;&#123;first_name&#125;&#125;</span>, we’re so happy to have you on board.&lt;/p&gt;
+</textarea>
+                          <pre id="code-121"><code><span class='cm-s-neo'>&lt;h1&gt;Welcome to <span class="cm-tag">&#123;<span></span>&#123;</span><span class="cm-variable-2">product_name</span><span class="cm-tag">&#125;<span></span>&#125;</span>!&lt;&#47;h1&gt;
+&lt;p&gt;Hi <span class="cm-tag">&#123;<span></span>&#123;</span><span class="cm-variable-2">first_name</span><span class="cm-tag">&#125;<span></span>&#125;</span>, we’re so happy to have you on board.&lt;&#47;p&gt;
+</span></code></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Handlebars also supports block expressions, including control flow:</p>
+                    </div>
+                    <div class="magic-block-code">
+                      <ul class="block-code-header">
+                        <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">Control flow with Handlebars</a></li>
+                      </ul>
+                      <div class="block-code-code">
+                        <span ng-if="tab == 0">
+                          <button ng-click="copyCode(65)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                          <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-65"><span ng-non-bindable>&#123;&#123;#if title&#125;&#125;</span>
+  &lt;h2&gt;<span ng-non-bindable>&#123;&#123;title&#125;&#125;</span>&lt;/h2&gt;
+<span ng-non-bindable>&#123;&#123;/if&#125;&#125;</span>
+</textarea>
+                          <pre id="code-65"><code><span class='cm-s-neo'><span class="cm-tag">&#123;<span></span>&#123;</span><span class="cm-keyword">#if</span> <span class="cm-variable-2">title</span><span class="cm-tag">&#125;<span></span>&#125;</span>
+  &lt;h2&gt;<span class="cm-tag">&#123;<span></span>&#123;</span><span class="cm-variable-2">title</span><span class="cm-tag">&#125;<span></span>&#125;</span>&lt;&#47;h2&gt;
+<span class="cm-tag">&#123;<span></span>&#123;</span><span class="cm-keyword">&#47;if</span><span class="cm-tag">&#125;<span></span>&#125;</span>
+</span></code></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>You can read more about what Handlebars supports <a href="https://handlebarsjs.com/" target="_self">on their website</a>.</p>
+                      <p>Now, what’s the deal with template inheritance?</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="data-inheritance"></span>
+                        <div id="section-data-inheritance" class="anchor waypoint"></div>
+                        Data inheritance<a href="#section-data-inheritance" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Picture a set of stairs. At the top is your team. A few steps down is the project that your template belongs to. Below that is your template. And at the very bottom is the message.</p>
+                      <pre><code>team
+    project
+        template
+            message
+</code></pre>
+                      <p>Now let’s say that your template uses the following snippet: <code>Welcome to <span ng-non-bindable>&#123;&#123;product_name&#125;&#125;</span></code>. If you have followed our Getting Started guide, or perhaps read about locals/variables in the documentation for messages, you might think that the only way to inject the value for <code>product_name</code> into your message is by setting it in the <code>data</code> property of the message, like so:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "data: {
+    "product_name": "Acme Knives",
+  },
+}</span>
+</code></pre>
+                      <p>But that’s not the case - that’s just one way to do it. </p>
+                      <p>In most cases, this particular piece of data would best be defined on the project, if we assume that project == product, which it will for most companies. However, if this was a huge product, and the company behind it only had this one product, you could probably define it on the team, since team == company == product in that case.</p>
+                      <p>The point of all this is that data can and should be defined as high up as it makes sense, and then be inherited all the way down to the message, according to the order we described earlier.</p>
+                      <p>If something is defined on multiple levels, for example on the team <em>and</em> the project, the lowest definition (closest to the message) will always override what has been inherited from higher up. </p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="structural-inheritance"></span>
+                        <div id="section-structural-inheritance" class="anchor waypoint"></div>
+                        Structural inheritance<a href="#section-structural-inheritance" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>A template is more than data, though. There’s also a lot of HTML markup, CSS and plain text. Why can’t this be inherited too? Ah, but it can!</p>
+                      <p>If your project has multiple templates that share a footer and header, then those footers and headers can be defined on the project, and the templates will be <em>wrapped</em> inside them. </p>
+                      <pre><code>project header
+    template body
+project footer
+</code></pre>
+                      <p>But why stop there? If every template in every project has the same &quot;Can’t read this email? Click here to read it on the web&quot; intro at the top, and the same tiny &quot;An Acme product&quot; message at the bottom, why not define them on the team, and wrap the projects in those? That’s exactly how Outkit works!</p>
+                      <pre><code>team header                 &lt;-- Can’t read this email? Click here
+    project header          &lt;-- Product logo and header
+        template body       &lt;-- Click here to reset your password
+    project footer          &lt;-- Facebook | Twitter | Blog
+team footer                 &lt;-- An Acme product
+</code></pre>
+                      <p>And it doesn’t stop with markup and text. The exact same system is in place for CSS/styles. Define your team styles on your team, then give each project their own look, and override at the template level (if you even need to). Pretty sweet.</p>
+                      <pre><code>team styles
+    project styles
+        template styles
+</code></pre>
+                      <p>By using our inheritance system wisely, setting up a new template can be as easy as clicking a few buttons and tweaking just a tiny amount of markup, and you’re good to go with a sweet-looking template.</p>
+                    </div>
+                    <hr>
+                    <div class="nextSteps">
+                      <h3>What's Next</h3>
+                      <p>Now that you know the theory behind our templates, it’s time to learn how to create and edit them.</p>
+                      <table>
+                        <tr>
+                          <td><a href="./template-editor.html"><i class="fa fa-chevron-right"></i>Template Editor</a></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /CONTENT -->
+
+      </div>
+    </div>
+    <!-- Logo-->
+    <footer>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Outkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="What is Outkit? How does it work?">
+    <meta property="og:description" content="The high-level overview">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Application styles-->
+    <link rel="stylesheet" href="../../assets/bundle-hub2.css">
+    <!-- Custom CSS-->
+    <style>
+      a {
+        color: #343c54;
+      }
+      a:hover {
+        color: #0d0f15;
+      }
+      a.text-muted:hover {
+        color: #343c54;
+      }
+      .btn.btn-primary {
+        background-color: #343c54;
+      }
+      .btn.btn-primary:hover {
+        background-color: #0d0f15;
+      }
+      .theme-line #hub-landing-top h2 {
+        color: #343c54;
+      }
+      #hub-landing-top .btn:hover {
+        color: #343c54;
+      }
+      .theme-line #hub-landing-top .btn:hover {
+        color: #fff;
+      }
+      .theme-solid header#hub-header #header-top {
+        background-color: #343c54;
+      }
+      .theme-solid.header-gradient header#hub-header #header-top {
+        background: linear-gradient(to bottom, #343c54, #171a25);
+      }
+      .theme-solid.header-custom header#hub-header #header-top {
+        background-image: url(undefined);
+      }
+      .theme-line header#hub-header #header-top {
+        border-bottom-color: #343c54;
+      }
+     .theme-line header#hub-header #header-top .btn {
+        background-color: #343c54;
+      }
+
+      header#hub-header #header-top #header-logo {
+        width: 119px;
+        height: 40px;
+        margin-top: 0;
+        background-image: url(../../assets/e6b38a5-small-Screenshot_2018-01-23_10.46.23.png);
+      }
+      nav#hub-sidebar ul a.active {
+        background-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader .hub-subheader-breadcrumbs .dropdown-menu a:hover {
+        background-color: #343c54;
+      }
+      .discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button {
+        background-color: #343c54;
+      }
+      section#hub-discuss .discussion a .discuss-body h4 {
+        color: #343c54;
+      }
+      section#hub-discuss .discussion a:hover .discuss-body h4 {
+        color: #0d0f15;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky {
+        border-bottom-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box {
+        border-bottom-color: #343c54;
+      }
+      #hub-search-results h3 em {
+        color: #343c54;
+      }
+      .main_background, .tag-item {
+        background: #343c54 !important;
+      }
+      .main_background:hover {
+        background: #0d0f15 !important;
+      }
+      .main_color {
+        color: #343c54 !important;
+      }
+      .main_color_hover:hover {
+        color: #343c54 !important;
+      }
+      section#hub-discuss h1 {
+        color: #343c54;
+      }
+      #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=number]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=text]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input textarea:focus {
+        border: 1px solid #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active {
+        border-color: #343c54;
+        background-color: #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active:hover {
+        background-color: #0d0f15;
+        border-color: #0d0f15;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out:hover {
+        border-color: #343c54;
+        color: #343c54;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-left header .hub-reference-edit:hover {
+        color: #343c54;
+      }
+      .main-color-accent {
+        border-bottom: 3px solid #343c54;
+        padding-bottom: 8px;
+      }
+      #hub-reference .hub-reference .hub-reference-section p, #hub-reference .hub-reference .hub-reference-section table, #hub-reference .hub-reference .hub-reference-section ul, .content-body .magic-block-api-header ol li, .content-body .magic-block-api-header ul li, .content-body .magic-block-textarea ol li, .content-body .magic-block-textarea ul li, ol, p, ul {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-right {
+        width: 600px;
+      }
+      .hub-reference-right .marked-table {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body class="body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal ">
+    <header id="hub-header">
+      <div id="header-top">
+        <div class="hub-container">
+          <div class="clearfix">
+            <a href="/" class="header-link">
+              <h1 id="header-logo">Outkit</h1>
+            </a>
+            <nav>
+              <ul id="header-nav-left">
+                <li><a href="../docs/index.html" title="Guides">Guides</a></li>
+                <li><a href="../reference/index.html" title="API Reference">API Reference</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="hub-landing-top" class="hub-landing-buttons">
+            <h2>The Outkit Support and Developer Hub</h2>
+            <div class="hub-landing-description">
+              <p>Welcome to the Outkit support and developer hub. Here you&#39;ll find comprehensive guides and documentation to help you start working with Outkit as quickly as possible, as well as support if you get stuck. Let&#39;s jump right in!</p>
+            </div>
+            <a href="" class="btn btn-lg btn-primary"><i class="fa fa-rocket"></i>Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class="btn btn-lg btn-primary"><i class="icon icon-documentation"></i><span>Guides</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="hub-subheader-parent">
+        <div id="hub-subheader">
+          <div class="hub-container">
+            <nav id="header-bottom-nav">
+              <div id="header-icon-nav">
+                <div class="icons">
+                  <div class="hub-subheader-breadcrumbs">
+                    <span class="hub-breadcrumb-item"><span>v1.0</span></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="hub-container">
+      <div class="hub-container">
+        <div id="hub-sidebar-parent" class="hub-sidebar-sticky">
+          <nav id="hub-sidebar">
+            <div class="scrollable-parent">
+              <scrollable scroll-to-top="state.current().root">
+                <div id="hub-sidebar-content">
+                  <div>
+                    <h3>Documentation</h3>
+                    <ul>
+                      <li>
+                        <a href="./index.html" class="text-overflow">What is Outkit? How does it work?</a>
+                      </li>
+                      <li>
+                        <a href="./getting-started.html" class="text-overflow">Getting Started</a>
+                      </li>
+                      <li>
+                        <a href="./messages.html" class="text-overflow active">Messages</a>
+                      </li>
+                      <li>
+                        <a href="./templates.html" class="text-overflow">Template Concepts</a>
+                      </li>
+                      <li>
+                        <a href="./template-editor.html" class="text-overflow">Template Editor</a>
+                      </li>
+                      <li>
+                        <a href="./projects.html" class="text-overflow">Projects</a>
+                      </li>
+                      <li>
+                        <a href="./backends.html" class="text-overflow">Backends</a>
+                      </li>
+                      <li>
+                        <a href="./webhooks.html" class="text-overflow">Webhooks</a>
+                      </li>
+                      <li>
+                        <a href="./teams.html" class="text-overflow">Teams</a>
+                      </li>
+                      <li>
+                        <a href="./search-and-live-feed.html" class="text-overflow">Search and Live Feed</a>
+                      </li>
+                      <li>
+                        <a href="./using-our-api.html" class="text-overflow">Using our API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </scrollable>
+            </div>
+          </nav>
+        </div>
+
+        <!-- CONTENT GOES HERE -->
+
+        <section id="hub-content">
+          <div state-container class="hub-content-container">
+            <div id="replace-view">
+              <div>
+                <header id="content-head">
+                  <div class="row clearfix">
+                    <div class="col-xs-9">
+                      <h1>Messages</h1>
+                      <div class="excerpt">
+                        <p>All you ever wanted to know about Outkit Messages.</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div id="content-container" class="grid-container-fluid">
+                  <section class="content-body">
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/43f2e44-outkit-message-live-feed.gif" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/43f2e44-outkit-message-live-feed.gif"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Messages are what Outkit is all about - <em>sending</em> messages, in particular. We currently support two message types (emails and SMS/Text Messages), but we may offer more types in the future.</p>
+                      <p>The way Outkit works is that you submit messages using our API, which we then forward to your selected backend, which they then deliver to the recipient. Simple - right? Yes, using Outkit really <em>is</em> simple, but that’s because we have worked hard to hide the complexity behind such a seemingly simple message flow. We also support at lot of useful functionality that may not be obvious when following our Getting Started guide, and most of that functionality is unlocked by setting different properties on the message objects that you submit to us. </p>
+                      <p>In this article, we’ll dig deep into everything you can do with a message.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="the-basics"></span>
+                        <div id="section-the-basics" class="anchor waypoint"></div>
+                        The basics<a href="#section-the-basics" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Arguably, the most important parts of a message are what type it is, who it’s for, who it’s from and what it’s about - which correspond to the <code>type</code> property, the <code>to</code> property, the <code>from</code> property, and the <code>subject</code> property.</p>
+                      <p>Here’s how you specify these in the JSON message object:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "type": "email",
+  "to": "some.email@example.com",
+  "from": "support@yourapp.example",
+  "subject": "John invited you to join the Acme team",
+  ...
+}</span>
+</code></pre>
+                      <p>Type is easy - it’s either <code>email</code> or <code>sms</code>, at least for now. It’s required.</p>
+                      <p>The subject can be omitted if you have set a default subject in the template. Same for the <code>from</code> address.</p>
+                      <p>The <code>to</code> property is required. Note that you can include a name in the <code>to</code> and <code>from</code> properties, like so, to provide a nicer experience in their email client:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "to": "John Doe &lt;some.email@example.com&gt;",
+  "from": "Yourapp Support &lt;support@yourapp.example&gt;",
+  ...
+}</span>
+</code></pre>
+                      <p>For an SMS message, the <code>to</code> and <code>from</code> properties will typically contain phone numbers:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "to": "+1-555-111-2222",
+  "from": "+1-555-333-4444",
+  ...
+}</span>
+</code></pre>
+                      <p>The exact format of these may depend on which backend you use.</p>
+                      <p>Some SMS providers (like Twilio) also support using an alphanumeric identifier (up to 11 characters long) as the <code>from</code> address:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "from": "AcmeCorp",
+  ...
+}</span>
+</code></pre>
+                      <p>You should always send some test messages to verify that your provider supports the to/from formats that you are trying to use.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="outkit-specific-properties"></span>
+                        <div id="section-outkit-specific-properties" class="anchor waypoint"></div>
+                        Outkit-specific properties<a href="#section-outkit-specific-properties" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Every message must specify a project, like so: </p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "project": "my-project",
+  ...
+}</span>
+</code></pre>
+                      <p>You can either use an identifier/label, like we did above, or specify a <code>project_id</code>.</p>
+                      <p>Another somewhat Outkit-specific property that you may want to specify is <code>backend</code>. If the project you have specified does not have a default backend for the selected message type, you’ll need to specify a backend when submitting your message:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "backend": "my-backend",
+  ...
+}</span>
+</code></pre>
+                      <p>You can also use <code>backend_id</code>.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="using-a-template-or-supplying-your-own-content"></span>
+                        <div id="section-using-a-template-or-supplying-your-own-content" class="anchor waypoint"></div>
+                        Using a template or supplying your own content<a href="#section-using-a-template-or-supplying-your-own-content" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>There are three main ways to control what content gets sent to the recipient: </p>
+                      <ol>
+                        <li  value="1">Using an Outkit template (by specifying its ID or identifier in the API call)</li>
+                        <li  value="2">Supplying your own template data in the API call for rendering by us</li>
+                        <li  value="3">Provide pre-rendered HTML/text directly in the API call, bypassing our rendering entirely</li>
+                      </ol>
+                      <p>You can learn more about the exact syntax that can be used in templates in <a href="./templates.html" class="doc-link" data-sidebar="templates">the article on templates</a>.</p>
+                      <p>Here’s how you use an Outkit template by providing an identifier/label in the <code>template</code> property:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "template": "template-identifier",
+  ...
+}</span>
+</code></pre>
+                      <p>You can also specify a template by putting its ID in the <code>template_id</code> property:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "template_id": "6ac4a27e-d847-4f0b-9076-cff3f03bc55b",
+  ...
+}</span>
+</code></pre>
+                      <p>If you prefer to keep your templates as part of the source code of your project, you can simply send in their contents in the <code>html_template_body</code> and <code>text_template_body</code> properties, like so:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "html_template_body": "&lt;body&gt;...&#123;<span></span>&#123;some_local&#125;<span></span>&#125;...&lt;/body&gt;",
+  "text_template_body": "...&#123;<span></span>&#123;some_local&#125;<span></span>&#125;...",
+  ...
+}</span>
+</code></pre>
+                      <p>In this call there is no CSS/styles specified, so this implies that any CSS/styles must already have been applied to the HTML. </p>
+                      <p>If instead you want to keep your styles in a separate file, and avoid applying them yourself, you can provde them in the property <code>template_styles</code>, and we’ll apply them to the HTML to generate inline styles:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "html_template_body": "&lt;body&gt;...&#123;<span></span>&#123;some_local&#125;<span></span>&#125;...&lt;/body&gt;",
+  "template_styles": "p { color: red; }",
+  ...
+}</span>
+</code></pre>
+                      <p>The final way to specify what gets sent to the recipient is to provide us with the actual contents in the <code>html_body</code> and <code>text_body</code> properties:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "html_body": "&lt;body&gt;...&lt;/body&gt;",
+  "text_body": "plain text",
+  ...
+}</span>
+</code></pre>
+                      <p>This will simply skip the rendering step entirely and send the content along unmodified.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="data-for-your-templates"></span>
+                        <div id="section-data-for-your-templates" class="anchor waypoint"></div>
+                        Data for your templates<a href="#section-data-for-your-templates" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>If you decide to use templates, whether it’s Outkit templates or your own, you’ll probably want to send some <em>locals</em> or <em>variables</em>. These are pieces of data, with a name, that will be injected into the rendered version of your templates. So, for example, if you used <code>Hello <span>&#123;&#123;name&#125;&#125;</span></code> in your template, you’d supply the <em>value</em> for <code>name</code> like this:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "data": {
+    "name": "John Doe",
+    ...
+  }
+  ...
+}</span>
+</code></pre>
+                      <p>... which would then be rendered as <code>Hello John Doe</code>. There’s a lot more to learn about locals/variables (you can define default values on both the project and team, which can then be overridden per template, or per API call), but you should go to <a href="./templates.html" class="doc-link" data-sidebar="templates">the article on templates</a> for that.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="synchronous-processing"></span>
+                        <div id="section-synchronous-processing" class="anchor waypoint"></div>
+                        Synchronous processing<a href="#section-synchronous-processing" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>By default, submitted messages are queued for rendering and delivery. In some cases you need to get the full message (including the rendered result, delivery status etc.) back from the API call instead of just the waiting-to-be-queued version, which contains not much more than you submitted, except the ID.</p>
+                      <p>The way to achieve synchronous processing is by setting the <code>sync</code> flag to <code>true</code>, like so:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "sync": true,
+  ...
+}</span>
+</code></pre>
+                      <p>That’s all there is to it from a technical perspective, but there are some additional things to be aware of:</p>
+                      <ul>
+                        <li >Synchronous processing is severely limited for accounts without a payment method</li>
+                        <li >There is currently a limit of 100.000 sync messages per month for accounts with a payment method</li>
+                        <li >Synchronous processing incurs additional charges - see <a href="https://outkit.io/pricing" target="_self">our pricing page</a></li>
+                      </ul>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="render-only"></span>
+                        <div id="section-render-only" class="anchor waypoint"></div>
+                        Render-only<a href="#section-render-only" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Some users prefer to handle message delivery themselves, but could use a simple, hosted way to render their templates. Outkit works well for that use-case too. Simply pass <code>&quot;render_only&quot;: true</code> when submitting your message, and we’ll simply render it without trying to deliver it somewhere. Like so:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "render_only": true,
+  ...
+}</span>
+</code></pre>
+                      <p>This works equally well if you’re using Outkit templates or feeding us your own.</p>
+                      <p>It is common to use <code>&quot;sync&quot;: true</code> in conjunction with this flag, to avoid having to set up webhooks with a corresponding listener just to be notified when your template is done rendering.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="misc-properties"></span>
+                        <div id="section-misc-properties" class="anchor waypoint"></div>
+                        Misc. properties<a href="#section-misc-properties" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>You can set <code>&quot;test&quot;: true</code> to trigger test behaviour - meaning that the message is not delivered to the address in the <code>to</code> property, but to the test recipient that has been defined on the project or team.</p>
+                      <p>If you want to match Outkit messages against some database in your own app/project, you can set <code>id_from_submitter</code> to a string value of your choosing. Just note that it needs to be unique for your team.</p>
+                    </div>
+                    <hr>
+                    <div class="nextSteps">
+                      <h3>What's Next</h3>
+                      <p>Now that you understand messages, you should read up on templates.</p>
+                      <table>
+                        <tr>
+                          <td><a href="./templates.html"><i class="fa fa-chevron-right"></i>Templates</a></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /CONTENT -->
+
+      </div>
+    </div>
+    <!-- Logo-->
+    <footer>
+    </footer>
+  </body>
+</html>
+

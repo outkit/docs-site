@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Outkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="What is Outkit? How does it work?">
+    <meta property="og:description" content="The high-level overview">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Application styles-->
+    <link rel="stylesheet" href="../../assets/bundle-hub2.css">
+    <!-- Custom CSS-->
+    <style>
+      a {
+        color: #343c54;
+      }
+      a:hover {
+        color: #0d0f15;
+      }
+      a.text-muted:hover {
+        color: #343c54;
+      }
+      .btn.btn-primary {
+        background-color: #343c54;
+      }
+      .btn.btn-primary:hover {
+        background-color: #0d0f15;
+      }
+      .theme-line #hub-landing-top h2 {
+        color: #343c54;
+      }
+      #hub-landing-top .btn:hover {
+        color: #343c54;
+      }
+      .theme-line #hub-landing-top .btn:hover {
+        color: #fff;
+      }
+      .theme-solid header#hub-header #header-top {
+        background-color: #343c54;
+      }
+      .theme-solid.header-gradient header#hub-header #header-top {
+        background: linear-gradient(to bottom, #343c54, #171a25);
+      }
+      .theme-solid.header-custom header#hub-header #header-top {
+        background-image: url(undefined);
+      }
+      .theme-line header#hub-header #header-top {
+        border-bottom-color: #343c54;
+      }
+     .theme-line header#hub-header #header-top .btn {
+        background-color: #343c54;
+      }
+
+      header#hub-header #header-top #header-logo {
+        width: 119px;
+        height: 40px;
+        margin-top: 0;
+        background-image: url(../../assets/e6b38a5-small-Screenshot_2018-01-23_10.46.23.png);
+      }
+      nav#hub-sidebar ul a.active {
+        background-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader .hub-subheader-breadcrumbs .dropdown-menu a:hover {
+        background-color: #343c54;
+      }
+      .discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button {
+        background-color: #343c54;
+      }
+      section#hub-discuss .discussion a .discuss-body h4 {
+        color: #343c54;
+      }
+      section#hub-discuss .discussion a:hover .discuss-body h4 {
+        color: #0d0f15;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky {
+        border-bottom-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box {
+        border-bottom-color: #343c54;
+      }
+      #hub-search-results h3 em {
+        color: #343c54;
+      }
+      .main_background, .tag-item {
+        background: #343c54 !important;
+      }
+      .main_background:hover {
+        background: #0d0f15 !important;
+      }
+      .main_color {
+        color: #343c54 !important;
+      }
+      .main_color_hover:hover {
+        color: #343c54 !important;
+      }
+      section#hub-discuss h1 {
+        color: #343c54;
+      }
+      #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=number]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=text]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input textarea:focus {
+        border: 1px solid #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active {
+        border-color: #343c54;
+        background-color: #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active:hover {
+        background-color: #0d0f15;
+        border-color: #0d0f15;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out:hover {
+        border-color: #343c54;
+        color: #343c54;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-left header .hub-reference-edit:hover {
+        color: #343c54;
+      }
+      .main-color-accent {
+        border-bottom: 3px solid #343c54;
+        padding-bottom: 8px;
+      }
+      #hub-reference .hub-reference .hub-reference-section p, #hub-reference .hub-reference .hub-reference-section table, #hub-reference .hub-reference .hub-reference-section ul, .content-body .magic-block-api-header ol li, .content-body .magic-block-api-header ul li, .content-body .magic-block-textarea ol li, .content-body .magic-block-textarea ul li, ol, p, ul {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-right {
+        width: 600px;
+      }
+      .hub-reference-right .marked-table {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body class="body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal ">
+    <header id="hub-header">
+      <div id="header-top">
+        <div class="hub-container">
+          <div class="clearfix">
+            <a href="/" class="header-link">
+              <h1 id="header-logo">Outkit</h1>
+            </a>
+            <nav>
+              <ul id="header-nav-left">
+                <li><a href="../docs/index.html" title="Guides">Guides</a></li>
+                <li><a href="../reference/index.html" title="API Reference">API Reference</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="hub-landing-top" class="hub-landing-buttons">
+            <h2>The Outkit Support and Developer Hub</h2>
+            <div class="hub-landing-description">
+              <p>Welcome to the Outkit support and developer hub. Here you&#39;ll find comprehensive guides and documentation to help you start working with Outkit as quickly as possible, as well as support if you get stuck. Let&#39;s jump right in!</p>
+            </div>
+            <a href="" class="btn btn-lg btn-primary"><i class="fa fa-rocket"></i>Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class="btn btn-lg btn-primary"><i class="icon icon-documentation"></i><span>Guides</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="hub-subheader-parent">
+        <div id="hub-subheader">
+          <div class="hub-container">
+            <nav id="header-bottom-nav">
+              <div id="header-icon-nav">
+                <div class="icons">
+                  <div class="hub-subheader-breadcrumbs">
+                    <span class="hub-breadcrumb-item"><span>v1.0</span></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="hub-container">
+      <div class="hub-container">
+        <div id="hub-sidebar-parent" class="hub-sidebar-sticky">
+          <nav id="hub-sidebar">
+            <div class="scrollable-parent">
+              <scrollable scroll-to-top="state.current().root">
+                <div id="hub-sidebar-content">
+                  <div>
+                    <h3>Documentation</h3>
+                    <ul>
+                      <li>
+                        <a href="./index.html" class="text-overflow">What is Outkit? How does it work?</a>
+                      </li>
+                      <li>
+                        <a href="./getting-started.html" class="text-overflow">Getting Started</a>
+                      </li>
+                      <li>
+                        <a href="./messages.html" class="text-overflow">Messages</a>
+                      </li>
+                      <li>
+                        <a href="./templates.html" class="text-overflow">Template Concepts</a>
+                      </li>
+                      <li>
+                        <a href="./template-editor.html" class="text-overflow">Template Editor</a>
+                      </li>
+                      <li>
+                        <a href="./projects.html" class="text-overflow">Projects</a>
+                      </li>
+                      <li>
+                        <a href="./backends.html" class="text-overflow">Backends</a>
+                      </li>
+                      <li>
+                        <a href="./webhooks.html" class="text-overflow active">Webhooks</a>
+                      </li>
+                      <li>
+                        <a href="./teams.html" class="text-overflow">Teams</a>
+                      </li>
+                      <li>
+                        <a href="./search-and-live-feed.html" class="text-overflow">Search and Live Feed</a>
+                      </li>
+                      <li>
+                        <a href="./using-our-api.html" class="text-overflow">Using our API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </scrollable>
+            </div>
+          </nav>
+        </div>
+
+        <!-- CONTENT GOES HERE -->
+
+        <section id="hub-content">
+          <div class="hub-content-container">
+            <div id="replace-view">
+              <div>
+                <header id="content-head">
+                  <div class="row clearfix">
+                    <div class="col-xs-9">
+                      <h1>Webhooks</h1>
+                      <div class="excerpt">
+                        <p>Get programmatically notified when something happens to a message.</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div id="content-container" scroll-spy class="grid-container-fluid">
+                  <section class="content-body">
+                    <div class="magic-block-textarea">
+                      <p>Webhooks make it possible to be automatically notified (over HTTPS) when something happens to a message. They can be very useful if you have advanced needs or want to set up a deep integration with Outkit, but are not required for most accounts.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="use-cases"></span>
+                        <div id="section-use-cases" class="anchor waypoint"></div>
+                        Use cases<a href="#section-use-cases" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Here are some typical use cases for webhooks:</p>
+                      <ul>
+                        <li >Submit messages to Outkit for rendering, but deliver them yourself when we are done rendering</li>
+                        <li >Show a custom/in-house live feed of messages that you have submitted to Outkit</li>
+                        <li >Take action if a message fails to be delivered to the backend</li>
+                      </ul>
+                      <p>... or something else entirely. That’s the beauty of webhoooks - if you know what you’re doing you can use them to create basically anything.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="detailed-description"></span>
+                        <div id="section-detailed-description" class="anchor waypoint"></div>
+                        Detailed description<a href="#section-detailed-description" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Our webhooks work very similary to other webhooks you may have interacted with. Here’s a quick rundown:</p>
+                      <ul>
+                        <li >We always use the POST verb</li>
+                        <li >The content-type is <code>application/json</code></li>
+                        <li >Your endpoint must return a 2xx HTTP status code to acknowledge that you have received the notification</li>
+                      </ul>
+                      <p>The body of the POSTed request adheres to the following JSON structure:</p>
+                      <pre><code class="lang-js"><span class='cm-s-neo'>{
+  "id": "&lt;id-of-webhook-notification-event&gt;",
+  "webhook_id": "&lt;id-of-webhook-definition&gt;",
+  "event": "message.submitted",
+  "object_type": "message",
+  "object_id": "&lt;id-of-message&gt;",
+  "data": {
+    // This is a complete message object, including 
+    // the changes that triggered the webhook
+    "type": "email",
+    "subject": "Welcome to AcmeCorp!",
+    ...
+  },
+}</span>
+</code></pre>
+                      <p>You may currently encounter the following events:</p>
+                      <ul>
+                        <li ><code>message.submitted</code></li>
+                        <li ><code>message.rendered</code></li>
+                        <li ><code>message.delivered</code></li>
+                        <li ><code>message.failed</code></li>
+                        <li ><code>message.done</code></li>
+                      </ul>
+                      <p>Note that <code>message.done</code> will be triggered independently and in addition to the event that marked the message as done, for example <code>message.delivered</code> or <code>message.failed</code>. </p>
+                      <p>We do not guarantee the ordering of these events. They are triggered in the correct order within our system, but due to queueing and network conditions, you may sometimes receive them out of order.</p>
+                      <p>We retry delivery <em>roughly</em> once per hour until your endpoint returns a 2xx HTTP status code. Note that a 3xx redirect will be counted as a failure, and trigger our retry logic.</p>
+                      <p>Delivery is retried for a maximum of 72 times (so roughly for three days), at which point we give up. There is currently no notification set up to alert you of this, but we expect to offer this in the future.</p>
+                      <p>All webhook notifications are queued, and while do our best to keep delays to a minimum, you may sometimes experience significant delay before receiving your notification.</p>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- /CONTENT -->
+
+      </div>
+    </div>
+    <!-- Logo-->
+    <footer>
+    </footer>
+  </body>
+</html>

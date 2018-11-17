@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Outkit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="What is Outkit? How does it work?">
+    <meta property="og:description" content="The high-level overview">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Application styles-->
+    <link rel="stylesheet" href="../../assets/bundle-hub2.css">
+    <!-- Custom CSS-->
+    <style>
+      a {
+        color: #343c54;
+      }
+      a:hover {
+        color: #0d0f15;
+      }
+      a.text-muted:hover {
+        color: #343c54;
+      }
+      .btn.btn-primary {
+        background-color: #343c54;
+      }
+      .btn.btn-primary:hover {
+        background-color: #0d0f15;
+      }
+      .theme-line #hub-landing-top h2 {
+        color: #343c54;
+      }
+      #hub-landing-top .btn:hover {
+        color: #343c54;
+      }
+      .theme-line #hub-landing-top .btn:hover {
+        color: #fff;
+      }
+      .theme-solid header#hub-header #header-top {
+        background-color: #343c54;
+      }
+      .theme-solid.header-gradient header#hub-header #header-top {
+        background: linear-gradient(to bottom, #343c54, #171a25);
+      }
+      .theme-solid.header-custom header#hub-header #header-top {
+        background-image: url(undefined);
+      }
+      .theme-line header#hub-header #header-top {
+        border-bottom-color: #343c54;
+      }
+     .theme-line header#hub-header #header-top .btn {
+        background-color: #343c54;
+      }
+
+      header#hub-header #header-top #header-logo {
+        width: 119px;
+        height: 40px;
+        margin-top: 0;
+        background-image: url(../../assets/e6b38a5-small-Screenshot_2018-01-23_10.46.23.png);
+      }
+      nav#hub-sidebar ul a.active {
+        background-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader .hub-subheader-breadcrumbs .dropdown-menu a:hover {
+        background-color: #343c54;
+      }
+      .discussion .submit-vote.submit-vote-parent.voted a.submit-vote-button {
+        background-color: #343c54;
+      }
+      section#hub-discuss .discussion a .discuss-body h4 {
+        color: #343c54;
+      }
+      section#hub-discuss .discussion a:hover .discuss-body h4 {
+        color: #0d0f15;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky {
+        border-bottom-color: #343c54;
+      }
+      #hub-subheader-parent #hub-subheader.sticky-header.sticky .search-box {
+        border-bottom-color: #343c54;
+      }
+      #hub-search-results h3 em {
+        color: #343c54;
+      }
+      .main_background, .tag-item {
+        background: #343c54 !important;
+      }
+      .main_background:hover {
+        background: #0d0f15 !important;
+      }
+      .main_color {
+        color: #343c54 !important;
+      }
+      .main_color_hover:hover {
+        color: #343c54 !important;
+      }
+      section#hub-discuss h1 {
+        color: #343c54;
+      }
+      #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=number]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input input[type=text]:focus, #hub-reference .hub-api .api-manager .param-table .param-item .param-item-info .param-item-table .param-item-input textarea:focus {
+        border: 1px solid #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active {
+        border-color: #343c54;
+        background-color: #343c54;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out.active:hover {
+        background-color: #0d0f15;
+        border-color: #0d0f15;
+      }
+      #hub-reference .hub-api .api-definition .api-try-it-out:hover {
+        border-color: #343c54;
+        color: #343c54;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-left header .hub-reference-edit:hover {
+        color: #343c54;
+      }
+      .main-color-accent {
+        border-bottom: 3px solid #343c54;
+        padding-bottom: 8px;
+      }
+      #hub-reference .hub-reference .hub-reference-section p, #hub-reference .hub-reference .hub-reference-section table, #hub-reference .hub-reference .hub-reference-section ul, .content-body .magic-block-api-header ol li, .content-body .magic-block-api-header ul li, .content-body .magic-block-textarea ol li, .content-body .magic-block-textarea ul li, ol, p, ul {
+        font-size: 18px;
+        line-height: 1.5em;
+      }
+      #hub-reference .hub-reference .hub-reference-section .hub-reference-right {
+        width: 600px;
+      }
+      .hub-reference-right .marked-table {
+        margin-left: 0;
+      }
+    </style>
+  </head>
+  <body class="body-none theme-line header-solid header-bg-size-auto header-bg-pos-tl header-overlay-triangles lumosity-normal ">
+    <header id="hub-header">
+      <div id="header-top">
+        <div class="hub-container">
+          <div class="clearfix">
+            <a href="/" class="header-link">
+              <h1 id="header-logo">Outkit</h1>
+            </a>
+            <nav>
+              <ul id="header-nav-left">
+                <li><a href="../docs/index.html" title="Guides">Guides</a></li>
+                <li><a href="../reference/index.html" title="API Reference">API Reference</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div id="hub-landing-top" class="hub-landing-buttons">
+            <h2>The Outkit Support and Developer Hub</h2>
+            <div class="hub-landing-description">
+              <p>Welcome to the Outkit support and developer hub. Here you&#39;ll find comprehensive guides and documentation to help you start working with Outkit as quickly as possible, as well as support if you get stuck. Let&#39;s jump right in!</p>
+            </div>
+            <a href="" class="btn btn-lg btn-primary"><i class="fa fa-rocket"></i>Get Started</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="" class="btn btn-lg btn-primary"><i class="icon icon-documentation"></i><span>Guides</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="hub-subheader-parent">
+        <div id="hub-subheader">
+          <div class="hub-container">
+            <nav id="header-bottom-nav">
+              <div id="header-icon-nav">
+                <div class="icons">
+                  <div class="hub-subheader-breadcrumbs">
+                    <span class="hub-breadcrumb-item"><span>v1.0</span></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="hub-container">
+      <div class="hub-container">
+        <div id="hub-sidebar-parent" class="hub-sidebar-sticky">
+          <nav id="hub-sidebar">
+            <div class="scrollable-parent">
+              <scrollable scroll-to-top="state.current().root">
+                <div id="hub-sidebar-content">
+                  <div>
+                    <h3>Documentation</h3>
+                    <ul>
+                      <li>
+                        <a href="./index.html" class="text-overflow">What is Outkit? How does it work?</a>
+                      </li>
+                      <li>
+                        <a href="./getting-started.html" class="text-overflow active">Getting Started</a>
+                      </li>
+                      <li>
+                        <a href="./messages.html" class="text-overflow">Messages</a>
+                      </li>
+                      <li>
+                        <a href="./templates.html" class="text-overflow">Template Concepts</a>
+                      </li>
+                      <li>
+                        <a href="./template-editor.html" class="text-overflow">Template Editor</a>
+                      </li>
+                      <li>
+                        <a href="./projects.html" class="text-overflow">Projects</a>
+                      </li>
+                      <li>
+                        <a href="./backends.html" class="text-overflow">Backends</a>
+                      </li>
+                      <li>
+                        <a href="./webhooks.html" class="text-overflow">Webhooks</a>
+                      </li>
+                      <li>
+                        <a href="./teams.html" class="text-overflow">Teams</a>
+                      </li>
+                      <li>
+                        <a href="./search-and-live-feed.html" class="text-overflow">Search and Live Feed</a>
+                      </li>
+                      <li>
+                        <a href="./using-our-api.html" class="text-overflow">Using our API</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </scrollable>
+            </div>
+          </nav>
+        </div>
+
+        <!-- CONTENT GOES HERE -->
+
+        <section id="hub-content">
+          <div state-container class="hub-content-container">
+            <div id="replace-view">
+              <div>
+                <header id="content-head">
+                  <div class="row clearfix">
+                    <div class="col-xs-9">
+                      <h1>Getting Started</h1>
+                      <div class="excerpt">
+                        <p>This page will help you get started with Outkit. You&#39;ll be up and running in just a few minutes!</p>
+                      </div>
+                    </div>
+                  </div>
+                </header>
+                <div id="content-container" class="grid-container-fluid">
+                  <section class="content-body">
+                    <div class="magic-block-textarea">
+                      <p>In this guide, we’ll take you through the steps required to send a message using Outkit. In the process, we’ll get your Outkit account ready to be used in your project/product/script/whatever. We’ll focus on emails in this guide, but you can also use Outkit to send SMS messages. Here’s a quick overview of the steps we’ll cover:</p>
+                      <ul>
+                        <li >Create a template</li>
+                        <li >Set up a backend</li>
+                        <li >Create an API token</li>
+                        <li >Submit a message</li>
+                      </ul>
+                      <p>Let’s get started!</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="creating-a-template"></span>
+                        <div id="section-creating-a-template" class="anchor waypoint"></div>
+                        Creating a template<a href="#section-creating-a-template" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>There are several ways to use Outkit without using our template system, but it offers quite a few benefits that most templating solutions don’t, so in this guide we’ll set up and use a template. We recommend that you use our template system if you don’t have a good reason not to.</p>
+                      <p>Log in to your account, click Templates, then New Template near the top right corner.</p>
+                    </div>
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/0f331d5-Screenshot_2018-04-29_13.53.07.png" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/0f331d5-Screenshot_2018-04-29_13.53.07.png"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>In the first screen, you choose the template type - Email or SMS. Choose Email.</p>
+                    </div>
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/4832d90-Screenshot_2018-04-29_13.54.11.png" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/4832d90-Screenshot_2018-04-29_13.54.11.png"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Next, you are presented with our template picker. This lets you base your new template on one of our pre-defined master templates, saving you potentially days of work. This time, we’ll choose the Welcome template.</p>
+                    </div>
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/b2c7b83-Screenshot_2018-04-29_13.55.12.png" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/b2c7b83-Screenshot_2018-04-29_13.55.12.png"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>The next screen lets us give our new template a name and an identifier. You’ll use the identifier later in the API call. </p>
+                    </div>
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/4c87e56-Screenshot_2018-04-29_13.56.33.png" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/4c87e56-Screenshot_2018-04-29_13.56.33.png"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>But there’s something else going on in this screen as well, something that’s key to how Outkit templates work. A template can, if you choose, inherit headers, footers and data from its project and team. They <em>wrap</em> the template, so to speak. Like so:</p>
+                      <pre><code>team header
+    project header
+        template body
+    project footer
+team footer
+</code></pre>
+                      <p>You can read more about how this works in <a href="./templates.html" class="doc-link" data-sidebar="templates">our article on templates</a>, so for now we’ll just choose Combined Template. This gives us the full master template without risking overwriting anything.</p>
+                      <p>Great, we have created our template! You’d normally adapt it to your needs and align it with your visual profile at this point, but to keep this guide short, we’ll just leave it untouched and move on.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="setting-up-a-backend"></span>
+                        <div id="section-setting-up-a-backend" class="anchor waypoint"></div>
+                        Setting up a backend<a href="#section-setting-up-a-backend" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Outkit sits between you and certain supported providers (like Twilio and Mailgun). </p>
+                      <pre><code>you  ⟶  outkit  ⟶  provider  ⟶  recipient
+</code></pre>
+                      <p>The providers are experts at low-level message delivery. An <em>instance</em> of a provider, combined with your customer-specific configuration and credentials, is called a <em>backend</em> in Outkit parlance. You can have many different backends, even multiple ones for the same provider (with different configurations).</p>
+                      <p>In this guide we’ll configure a backend of your choosing, so we can’t really say which provider to choose and what configuration to specify. You’ll need to have an account or sign up for an account with at least one of our supported email providers to follow along with this guide (and to use Outkit), so if you don’t already have such an account, please create one now - we’ll wait.</p>
+                      <p>All done? Great. In your Outkit account, click Backends, then New Backend. Select the name of the email provider in the dropdown. You’ll notice that a new section appears, called &quot;Provider-specific configuration&quot;. </p>
+                    </div>
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/1f66b36-Screenshot_2018-04-29_13.58.17.png" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/1f66b36-Screenshot_2018-04-29_13.58.17.png"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>This is where you type in the configuration from your provider, whatever it may be. You may have to create an API token, generate SMTP settings, or something similar in your provider’s account first. Type in a description and an identifier, and you should be good to go.</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="creating-an-api-token"></span>
+                        <div id="section-creating-an-api-token" class="anchor waypoint"></div>
+                        Creating an API token<a href="#section-creating-an-api-token" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>We’re almost ready for the fun stuff, but you’ll need an API token first. Click on your profile picture in the top right corner of your Outkit account, then select API Access, then New API Token.</p>
+                    </div>
+                    <div class="magic-block-image">
+                      <figure><a href="../../assets/b6ced6a-Screenshot_2018-04-29_13.59.28.png" class="block-display-image-parent block-display-image-size-smart "><img src="../../assets/b6ced6a-Screenshot_2018-04-29_13.59.28.png"/></a>
+                      </figure>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>There are several options here that you can explore later, but for now just click Create.</p>
+                      <p>When the API token has been created, it’s important that you copy all three parts of the credentials: The key, the secret and the passphrase. The last two cannot be retrieved later, so be sure to note them down (securely) before moving on.</p>
+                      <p>That’s it, we’re ready!</p>
+                    </div>
+                    <div class="magic-block-api-header">
+                      <h1 class="header-scroll is-api-header">
+                        <span id="submitting-a-message"></span>
+                        <div id="section-submitting-a-message" class="anchor waypoint"></div>
+                        Submitting a message<a href="#section-submitting-a-message" class="fa fa-anchor"></a>
+                      </h1>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>In this final step we’ll use Node.js to submit a message. That may or may not be your language of choice, but you’ll be able to apply this same technique to whatever language you prefer. If you don’t have Node.js installed, you can either install it now or just read along for this part.</p>
+                      <p>Create a new directory on your local machine, call it whatever you want. Then, <code>cd</code> into it.</p>
+                      <p>Run the following commands:</p>
+                    </div>
+                    <div class="magic-block-code">
+                      <ul class="block-code-header">
+                        <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">Shell</a></li>
+                      </ul>
+                      <div class="block-code-code">
+                        <span ng-if="tab == 0">
+                          <button ng-click="copyCode(836)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                          <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-836">npm install @outkit/outkit
+touch index.js</textarea>
+                          <pre id="code-836"><code><span class='cm-s-neo'><span class="cm-builtin">npm</span> install @outkit&#47;outkit
+<span class="cm-builtin">touch</span> index.js</span></code></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Then open <code>index.js</code> in your favourite text editor and type in the following:</p>
+                    </div>
+                    <div class="magic-block-code">
+                      <ul class="block-code-header">
+                        <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">JavaScript</a></li>
+                      </ul>
+                      <div class="block-code-code">
+                        <span ng-if="tab == 0">
+                          <button ng-click="copyCode(613)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                          <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-613">const Outkit = require('@outkit/outkit');
+
+// Instantiate an Outkit client
+const client = new Outkit.Client({
+  key: '',           // Fill in your API key
+  secret: '',        // Fill in your API secret
+  passphrase: '',    // Fill in your API passphrase (not your personal password)
+});
+
+// Construct a message record
+const messageRecord = {
+  type: 'email',                   // Could also be 'sms'
+  project: 'my-project',           // Project identifier - you can find it in the web UI
+  template: 'my-welcome',          // Template identifier from the earlier step
+  backend: 'my-backend',           // Backend identifier from the earlier step
+  subject: 'Welcome, Jane!',       // Email subject
+  to: 'some.name@example.com',     // Recipient address
+  from: 'other.name@example.com',  // Sender address
+  data: {                          // Named variables for the template
+    name: 'John Doe',
+  },
+};
+
+// Then, submit the message (you could also do this using async/await or Promises)
+client.createMessage(messageRecord, (err, message) =&gt; {
+  if (err) {
+    console.error('ERROR:', err);
+  } else {
+    console.log('MESSAGE:', message);
+});</textarea>
+                          <pre id="code-613"><code><span class='cm-s-neo'><span class="cm-keyword">const</span> <span class="cm-variable">Outkit</span> <span class="cm-operator">=</span> <span class="cm-variable">require</span>(<span class="cm-string">'@outkit&#47;outkit'</span>);
+
+<span class="cm-comment">&#47;&#47; Instantiate an Outkit client</span>
+<span class="cm-keyword">const</span> <span class="cm-variable">client</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">Outkit</span>.<span class="cm-property">Client</span>({
+  <span class="cm-property">key</span>: <span class="cm-string">''</span>,           <span class="cm-comment">&#47;&#47; Fill in your API key</span>
+  <span class="cm-property">secret</span>: <span class="cm-string">''</span>,        <span class="cm-comment">&#47;&#47; Fill in your API secret</span>
+  <span class="cm-property">passphrase</span>: <span class="cm-string">''</span>,    <span class="cm-comment">&#47;&#47; Fill in your API passphrase (not your personal password)</span>
+});
+
+<span class="cm-comment">&#47;&#47; Construct a message record</span>
+<span class="cm-keyword">const</span> <span class="cm-variable">messageRecord</span> <span class="cm-operator">=</span> {
+  <span class="cm-property">type</span>: <span class="cm-string">'email'</span>,                   <span class="cm-comment">&#47;&#47; Could also be 'sms'</span>
+  <span class="cm-property">project</span>: <span class="cm-string">'my-project'</span>,           <span class="cm-comment">&#47;&#47; Project identifier - you can find it in the web UI</span>
+  <span class="cm-property">template</span>: <span class="cm-string">'my-welcome'</span>,          <span class="cm-comment">&#47;&#47; Template identifier from the earlier step</span>
+  <span class="cm-property">backend</span>: <span class="cm-string">'my-backend'</span>,           <span class="cm-comment">&#47;&#47; Backend identifier from the earlier step</span>
+  <span class="cm-property">subject</span>: <span class="cm-string">'Welcome, Jane!'</span>,       <span class="cm-comment">&#47;&#47; Email subject</span>
+  <span class="cm-property">to</span>: <span class="cm-string">'some.name@example.com'</span>,     <span class="cm-comment">&#47;&#47; Recipient address</span>
+  <span class="cm-property">from</span>: <span class="cm-string">'other.name@example.com'</span>,  <span class="cm-comment">&#47;&#47; Sender address</span>
+  <span class="cm-property">data</span>: {                          <span class="cm-comment">&#47;&#47; Named variables for the template</span>
+    <span class="cm-property">name</span>: <span class="cm-string">'John Doe'</span>,
+  },
+};
+
+<span class="cm-comment">&#47;&#47; Then, submit the message (you could also do this using async&#47;await or Promises)</span>
+<span class="cm-variable">client</span>.<span class="cm-property">createMessage</span>(<span class="cm-variable">messageRecord</span>, (<span class="cm-def">err</span>, <span class="cm-def">message</span>) <span class="cm-operator">=&gt;</span> {
+  <span class="cm-keyword">if</span> (<span class="cm-variable-2">err</span>) {
+    <span class="cm-variable">console</span>.<span class="cm-property">error</span>(<span class="cm-string">'ERROR:'</span>, <span class="cm-variable-2">err</span>);
+  } <span class="cm-keyword">else</span> {
+    <span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-string">'MESSAGE:'</span>, <span class="cm-variable-2">message</span>);
+});</span></code></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Save the file, then run it:</p>
+                    </div>
+                    <div class="magic-block-code">
+                      <ul class="block-code-header">
+                        <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">Shell</a></li>
+                      </ul>
+                      <div class="block-code-code">
+                        <span ng-if="tab == 0">
+                          <button ng-click="copyCode(640)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                          <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-640">node ./index.js</textarea>
+                          <pre id="code-640"><code><span class='cm-s-neo'><span class="cm-builtin">node</span> .&#47;index.js</span></code></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>Congratulations - if you didn’t receive an error, you have just submitted your first Outkit message! Chances are it has already been delivered and completed, but you could have followed its progress live in the <a href="https://app.outkit.io/messages" target="_self">Messages tab</a> of the web UI. You might want to submit another message and quickly switch to your web browser to see it in action.</p>
+                      <p>Although there are quite a few lines of text in the code snippet above, you’ll just need to instantiate the client once in your app and share it somehow. And when you are done customizing your project and templates, you can skip every property that is set on the project or template. A typical message submission in a real app, without all the fluff, will look more like this:</p>
+                    </div>
+                    <div class="magic-block-code">
+                      <ul class="block-code-header">
+                        <li><a href="" ng-click="showCode(0)" ng-class="{active: (0 == tab)}">JavaScript</a></li>
+                      </ul>
+                      <div class="block-code-code">
+                        <span ng-if="tab == 0">
+                          <button ng-click="copyCode(918)" class="copy-code-button main_background"><span ng-show="!copied">Copy</span><span ng-show="copied">Copied</span></button>
+                          <textarea ng-non-bindable="ng-non-bindable" style="position: absolute; left: -10000px;" id="text-code-918">const message = await client.createMessage({
+  type: 'email',
+  project: 'my-project',
+  template: 'my-welcome',
+  to: 'some.name@example.com',
+  data: {
+    name: 'John Doe',
+  },
+});</textarea>
+                          <pre id="code-918"><code><span class='cm-s-neo'><span class="cm-keyword">const</span> <span class="cm-variable">message</span> <span class="cm-operator">=</span> <span class="cm-variable">await</span> <span class="cm-variable">client</span>.<span class="cm-property">createMessage</span>({
+  <span class="cm-property">type</span>: <span class="cm-string">'email'</span>,
+  <span class="cm-property">project</span>: <span class="cm-string">'my-project'</span>,
+  <span class="cm-property">template</span>: <span class="cm-string">'my-welcome'</span>,
+  <span class="cm-property">to</span>: <span class="cm-string">'some.name@example.com'</span>,
+  <span class="cm-property">data</span>: {
+    <span class="cm-property">name</span>: <span class="cm-string">'John Doe'</span>,
+  },
+});</span></code></pre>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="magic-block-textarea">
+                      <p>We’re biased, of course, but we think that’s a pretty nice way to be able to reliably send several types of messages using one API, with the ability to switch easily between multiple backends!.</p>
+                    </div>
+                    <hr>
+                    <div class="nextSteps">
+                      <h3>What's Next</h3>
+                      <p>Now that you know the basics, it’s time to delve a little deeper. There’s a lot of great functionality waiting to be discovered. Here are some other pages worth exploring.</p>
+                      <table>
+                        <tr>
+                          <td><a href="./messages.html"><i class="fa fa-chevron-right"></i>Messages</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="./templates.html"><i class="fa fa-chevron-right"></i>Templates</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="./projects.html"><i class="fa fa-chevron-right"></i>Projects</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="./backends.html"><i class="fa fa-chevron-right"></i>Backends</a></td>
+                        </tr>
+                        <tr>
+                          <td><a href="./webhooks.html"><i class="fa fa-chevron-right"></i>Webhooks</a></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- /CONTENT -->
+
+      </div>
+    </div>
+    <!-- Logo-->
+    <footer>
+    </footer>
+  </body>
+</html>
+
